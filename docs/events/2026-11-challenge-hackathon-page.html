@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow"><!-- Draft only: remove before launch. -->
+<title>Tech for Palestine online build session: November 2026</title>
+<meta name="description" content="A free online build session on the Tech for Palestine Discord, Saturday November 28, 2026. Start a project for the November Incubator Challenge and apply to the Incubator with it.">
+<link rel="icon" type="image/png" href="https://hackathon2026.techforpalestine.org/t4p-favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<!--
+  Draft for review, 2026-11-17. Not approved by Iva or Matt.
+  Wording: T4P's own, from techforpalestine.org and hackathon2026.techforpalestine.org,
+  in US spelling. Brand tokens: docs/brand.md.
+  Photos: T4P's own, hotlinked from hackathon2026.techforpalestine.org.
+  Search for "[" to find every placeholder.
+-->
+<style>
+  :root {
+    --grove: #157a3e;
+    --grove-hover: #0e5a2f;
+    --grove-deep: #2f5c3f;
+    --first-light: #e7f2e9;
+    --first-light-edge: #d2e4d6;
+    --ink: #2a2428;
+    --ink-dark: #201d1e;
+    --ink-secondary: #73656e;
+    --ink-divider: #d6d6d6;
+    --stone: #f2f3ee;
+    --paper: #ffffff;
+    --red: #c8102e;
+    --pill: 999px;
+    --wrap: 1280px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  [id] { scroll-margin-top: 88px; }
+  body {
+    margin: 0; font-family: Outfit, system-ui, sans-serif; color: var(--ink);
+    background: var(--paper); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--grove); }
+  img { max-width: 100%; display: block; }
+  .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 24px; }
+  @media (min-width: 640px) { .wrap { padding: 0 32px; } }
+
+  .draft { background: var(--ink-dark); color: #fff; font-size: 13px; font-weight: 600; text-align: center; padding: 8px 16px; }
+
+  header.site { position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,.95); backdrop-filter: blur(8px); border-bottom: 1px solid var(--ink-divider); }
+  header.site .wrap { display: flex; align-items: center; gap: 24px; min-height: 72px; }
+  header.site img { height: 44px; width: auto; }
+  header.site nav { display: none; gap: 22px; margin-left: auto; }
+  header.site nav a { color: var(--ink); text-decoration: none; font-size: 15px; font-weight: 600; }
+  header.site nav a:hover { color: var(--grove); }
+  header.site .btn { margin-left: auto; }
+  @media (min-width: 1000px) { header.site nav { display: flex; } header.site .btn { margin-left: 0; } }
+
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 12px 22px; border-radius: var(--pill); font: 700 15px/1.2 Outfit, system-ui, sans-serif; text-decoration: none; transition: background-color .15s, color .15s, border-color .15s; }
+  @media (prefers-reduced-motion: reduce) { .btn { transition: none; } }
+  .btn:focus-visible { outline: 2px solid var(--grove); outline-offset: 3px; }
+  .on-green .btn:focus-visible { outline-color: #fff; }
+  .btn-green { background: var(--grove); color: #fff; }
+  .btn-green:hover { background: var(--grove-hover); }
+  .btn-white { background: #fff; color: var(--grove-deep); }
+  .btn-white:hover { background: var(--first-light); }
+  .btn-outline-white { border: 1px solid rgba(255,255,255,.7); color: #fff; }
+  .btn-outline-white:hover { background: #fff; color: var(--grove-deep); border-color: #fff; }
+  .ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+
+  h1, h2, h3 { font-weight: 800; text-wrap: balance; margin: 0; }
+  h2 { font-size: 30px; line-height: 1.15; }
+  h3 { font-size: 20px; line-height: 1.3; font-weight: 700; }
+  @media (min-width: 810px) { h2 { font-size: 40px; } }
+  section { padding: 56px 0; }
+  @media (min-width: 810px) { section { padding: 80px 0; } }
+  .lede { font-size: 19px; max-width: 62ch; margin: 16px 0 0; }
+  .muted { color: var(--ink-secondary); }
+  .stone { background: var(--stone); }
+  .pale { background: var(--first-light); }
+  .green { background: var(--grove); color: #fff; }
+  .deep { background: var(--grove-deep); color: #fff; }
+  .on-green a:not(.btn) { color: #fff; }
+
+  /* Hero */
+  .hero .grid { display: grid; gap: 40px; align-items: center; }
+  @media (min-width: 1024px) { .hero .grid { grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 56px; } }
+  .hero h1 { font-size: 40px; line-height: 1.08; }
+  @media (min-width: 810px) { .hero h1 { font-size: 58px; line-height: 1.04; } }
+  .hero .lede { font-size: 20px; }
+  .hero .ctas { margin-top: 28px; }
+  .hero .photo { width: 100%; height: auto; border-radius: 24px; }
+  .facts { margin: 28px 0 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; }
+  .facts li { background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.35); border-radius: 18px; padding: 14px 16px; }
+  .facts b { display: block; font-size: 14px; font-weight: 700; }
+  .facts span { font-size: 18px; font-weight: 600; line-height: 1.35; }
+  .local-time { margin: 12px 0 0; font-size: 15px; }
+
+  /* Number cards */
+  .cards { display: grid; gap: 16px; margin-top: 36px; }
+  @media (min-width: 640px) { .cards { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+  @media (min-width: 1024px) { .cards.four { grid-template-columns: repeat(4, minmax(0,1fr)); } }
+  .card { background: #fff; border: 1px solid var(--first-light-edge); border-radius: 24px; padding: 24px; }
+  .card p { margin: 8px 0 0; }
+  .card .num { display: block; font-size: 44px; font-weight: 800; color: var(--grove); line-height: 1.1; margin-bottom: 8px; }
+
+  /* Text beside a photo */
+  .media { display: grid; gap: 36px; align-items: center; }
+  @media (min-width: 1024px) { .media { grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 64px; } .media.flip > :first-child { order: 2; } }
+  .media img { width: 100%; height: auto; border-radius: 24px; aspect-ratio: 3 / 2; object-fit: cover; }
+  .media figure { margin: 0; }
+  .media figcaption { margin-top: 8px; font-size: 14px; color: var(--ink-secondary); }
+  .on-green figcaption { color: rgba(255,255,255,.85); }
+
+  /* Challenge */
+  .challenge-q { font-size: 28px; line-height: 1.2; max-width: 32ch; font-weight: 800; margin: 12px 0 0; }
+  @media (min-width: 810px) { .challenge-q { font-size: 40px; } }
+  .questions { list-style: none; margin: 24px 0 0; padding: 0; display: grid; gap: 12px; }
+  @media (min-width: 900px) { .questions { grid-template-columns: repeat(3, minmax(0,1fr)); } }
+  .questions li { background: #fff; border: 1px solid var(--first-light-edge); border-radius: 20px; padding: 20px 22px; }
+  .questions .q { display: block; font-size: 15px; font-weight: 800; color: var(--grove); margin-bottom: 6px; }
+
+  /* Corrected-headline card from the challenge page */
+  .ch { font-size: 15px; color: var(--ink); margin: 0; }
+  @media (min-width: 810px) { .ch { font-size: 16px; } }
+  .ch-card { padding: 1.1em 1.4em .7em; border-radius: 1.4em; background: #fff; box-shadow: 0 1px 2px #0000000d; border: 1px solid var(--first-light-edge); }
+  .ch-bar { display: flex; align-items: center; gap: .75em; padding-bottom: .8em; border-bottom: 2px solid var(--ink); }
+  .ch-logo { padding: .1em .45em .15em; border-radius: .3em; background: var(--ink); color: #fff; font-size: 1.05em; font-weight: 800; line-height: 1.2; }
+  .ch-section { font-size: 1.05em; font-weight: 700; }
+  .ch-head { margin: 2.1em 0 .4em; font-size: 1.6em; font-weight: 800; line-height: 1.3; }
+  .ch-caret { position: relative; display: inline-block; width: .3em; height: 1em; }
+  .ch-ins { position: absolute; bottom: 2.25em; left: 50%; transform: translate(-50%); color: var(--red); font-size: .62em; font-weight: 600; line-height: 1; white-space: nowrap; }
+  .ch-ins::after { content: ""; position: absolute; top: calc(100% + .2em); left: 50%; width: 2px; height: .6em; border-radius: 1px; background: currentColor; transform: translate(-50%); }
+  .ch-ins::before { content: ""; position: absolute; top: calc(100% + .47em); left: 50%; width: .42em; height: .42em; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: translate(-50%) rotate(45deg); }
+  .ch-caret--start .ch-ins { left: 0; transform: translate(-35%); }
+  .ch-caret--start .ch-ins::before, .ch-caret--start .ch-ins::after { left: calc(35% + .24em); }
+  .ch-strike { position: relative; white-space: nowrap; }
+  .ch-strike::after { content: ""; position: absolute; left: -.08em; right: -.08em; top: 52%; height: .09em; min-height: 2px; border-radius: 999px; background: var(--red); transform: rotate(-1.5deg); }
+  .ch-fix { color: var(--red); font-weight: 500; white-space: nowrap; }
+  .ch-caption { margin-top: .9em; font-size: 14px; font-weight: 600; color: var(--grove-deep); }
+  .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+  /* Lists */
+  .ticks { list-style: none; padding: 0; margin: 20px 0 0; display: grid; gap: 8px; }
+  .ticks li { padding-left: 28px; position: relative; }
+  .ticks li::before { content: ""; position: absolute; left: 4px; top: .55em; width: 12px; height: 7px; border-left: 3px solid var(--grove); border-bottom: 3px solid var(--grove); transform: rotate(-45deg); }
+  .on-green .ticks li::before { border-color: #fff; }
+  .numbered { padding-left: 24px; margin: 12px 0 0; display: grid; gap: 4px; }
+
+  /* Projects */
+  .projects { display: grid; gap: 12px; margin-top: 24px; }
+  @media (min-width: 810px) { .projects { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+  .projects a { display: flex; gap: 16px; align-items: flex-start; text-decoration: none; color: var(--ink); background: #fff; border: 1px solid var(--first-light-edge); border-radius: 20px; padding: 18px 20px; }
+  .projects a:hover { border-color: var(--grove); }
+  .projects img, .projects .letter { flex: none; width: 48px; height: 48px; border-radius: 12px; object-fit: contain; background: var(--stone); }
+  .projects .letter { display: grid; place-items: center; font-weight: 800; color: var(--grove-deep); font-size: 20px; }
+  .projects b { display: block; color: var(--grove-deep); font-size: 18px; }
+
+  /* Agenda */
+  .agenda { width: 100%; border-collapse: collapse; margin-top: 28px; background: #fff; border-radius: 20px; overflow: hidden; border: 1px solid var(--first-light-edge); }
+  .agenda th, .agenda td { text-align: left; padding: 14px 18px; border-bottom: 1px solid var(--ink-divider); vertical-align: top; }
+  .agenda th { font-size: 14px; color: var(--grove-deep); background: var(--first-light); }
+  .agenda td:first-child, .agenda td:nth-child(2), .agenda td:nth-child(3) { white-space: nowrap; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .agenda td:nth-child(2), .agenda td:nth-child(3) { color: var(--ink-secondary); font-weight: 600; }
+  .agenda tr:last-child td { border-bottom: 0; }
+  @media (max-width: 560px) { .agenda th, .agenda td { padding: 10px 6px; font-size: 14px; } .agenda td:last-child { overflow-wrap: anywhere; } }
+
+  /* Steps */
+  .steps { list-style: none; padding: 0; margin: 32px 0 0; display: grid; grid-template-columns: minmax(0,1fr); gap: 14px; counter-reset: step; }
+  @media (min-width: 900px) { .steps { grid-template-columns: repeat(4, minmax(0,1fr)); } }
+  .steps li { counter-increment: step; background: #fff; border-radius: 20px; padding: 22px; border: 1px solid var(--first-light-edge); overflow-wrap: anywhere; }
+  .steps li::before { content: counter(step); display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--grove); color: #fff; font-weight: 800; margin-bottom: 12px; }
+  .steps p { margin: 6px 0 0; }
+
+  /* Stats */
+  .stats { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; margin-top: 28px; }
+  .stats div { border: 1px solid rgba(255,255,255,.35); border-radius: 18px; padding: 16px; }
+  .stats b { display: block; font-size: 34px; line-height: 1.1; font-weight: 800; }
+
+  /* FAQ */
+  .faq { margin-top: 28px; border-top: 1px solid var(--ink-divider); }
+  .faq details { border-bottom: 1px solid var(--ink-divider); padding: 18px 0; }
+  .faq summary { cursor: pointer; font-weight: 700; font-size: 18px; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: "+"; color: var(--grove); font-weight: 800; font-size: 22px; line-height: 1; }
+  .faq details[open] summary::after { content: "\2212"; }
+  .faq details p { margin: 12px 0 0; max-width: 70ch; }
+
+  .closing { text-align: center; }
+  .closing h2 { max-width: 24ch; margin: 0 auto; }
+  .closing p { max-width: 56ch; margin: 18px auto 0; font-size: 19px; }
+  .closing .ctas { justify-content: center; margin-top: 30px; }
+
+  footer.site { background: var(--ink-dark); color: rgba(255,255,255,.85); font-size: 14px; padding: 40px 0; }
+  footer.site a { color: #fff; }
+  footer.site p { margin: 0 0 10px; }
+</style>
+</head>
+<body>
+
+<div class="draft" role="note">Draft for review, November 17, 2026. Not approved. Not confirmed yet: date, time, platform, registration link and code of conduct.</div>
+
+<header class="site">
+  <div class="wrap">
+    <a href="https://techforpalestine.org/" aria-label="Tech for Palestine home">
+      <img src="https://techforpalestine.org/images/new-homepage/t4p-logo.webp" alt="Tech for Palestine" width="100" height="44">
+    </a>
+    <nav aria-label="Page sections">
+      <a href="#expect">What to expect</a>
+      <a href="#challenge">Challenge</a>
+      <a href="#build">What teams can build</a>
+      <a href="#agenda">Agenda</a>
+      <a href="#incubator">Incubator</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-green" href="[QGIV REGISTRATION LINK]">Register for free</a>
+  </div>
+</header>
+
+<main>
+
+<!-- Hero -->
+<section class="hero green on-green" aria-labelledby="hero-heading">
+  <div class="wrap grid">
+    <div>
+      <h1 id="hero-heading">Tech for Palestine online build session</h1>
+      <p class="lede">Spend a Saturday afternoon with a team turning an idea about media bias into something real: a campaign, a guide, a dataset or a tool. You don't need to code.</p>
+      <ul class="facts">
+        <li><b>When</b><span>Saturday, November 28</span></li>
+        <li><b>Time</b><span>9:00 am to 1:00 pm ET<br>15:00 to 19:00 CET<br>16:00 to 20:00 Palestine</span></li>
+        <li><b>Where</b><span>Online, on the Tech for Palestine Discord</span></li>
+        <li><b>Cost</b><span>Free</span></li>
+      </ul>
+      <p class="local-time" id="local-time">14:00 to 18:00 UTC</p>
+      <div class="ctas">
+        <a class="btn btn-white" href="[QGIV REGISTRATION LINK]">Register for free</a>
+        <a class="btn btn-outline-white" href="#challenge">See the challenge</a>
+      </div>
+    </div>
+    <img class="photo"
+      src="https://hackathon2026.techforpalestine.org/events/hackathon-hero-balanced.webp"
+      srcset="https://hackathon2026.techforpalestine.org/events/hackathon-hero-balanced-small.webp 640w, https://hackathon2026.techforpalestine.org/events/hackathon-hero-balanced.webp 1077w"
+      sizes="(min-width:1024px) 600px, 92vw" width="1077" height="776"
+      alt="Participants sharing ideas around a table at a Tech for Palestine event">
+  </div>
+</section>
+
+<!-- What to expect -->
+<section id="expect" aria-labelledby="expect-heading">
+  <div class="wrap">
+    <h2 id="expect-heading">What to expect</h2>
+    <p class="lede">Builders, creatives and strategists from the Tech for Palestine community and beyond, working together on one challenge.</p>
+    <div class="cards four">
+      <div class="card"><span class="num">1</span><h3>Challenge</h3><p>The November Incubator Challenge on hasbara and media bias, with nine questions to choose from.</p></div>
+      <div class="card"><span class="num">4</span><h3>Hours</h3><p>Opening, 60-second idea pitches, team forming, build time, then team pitches.</p></div>
+      <div class="card"><span class="num">5</span><h3>People per team, max</h3><p>Come alone or with a team. Each team gets its own voice channel on Discord.</p></div>
+      <div class="card"><span class="num">3</span><h3>Minutes to pitch</h3><p>Who it helps, the problem, what you built and the next step. A demo is optional.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Challenge: wording quoted from techforpalestine.org/monthly-challenge -->
+<section id="challenge" class="stone" aria-labelledby="challenge-heading">
+  <div class="wrap">
+    <h2 id="challenge-heading">The challenge</h2>
+    <p class="challenge-q">How do we expose and combat hasbara, pro-Israel bias and Zionist ownership and influence of mainstream news media?</p>
+
+    <div class="media" style="margin-top:40px">
+      <div>
+        <h3 style="font-size:26px">Hasbara has a newsroom. Palestine needs its own.</h3>
+        <p>The mainstream media narrative on Palestine and the Gaza genocide is flooded with hasbara propaganda and consistently framed around Israel's talking points. It normalizes, downplays and manufactures consent for the atrocities Israel commits, through a playbook that is easy to spot once named.</p>
+        <p>We're especially interested in sovereign, independent ways to publish and disseminate news, including non-traditional channels that are harder to influence.</p>
+        <p><a href="https://techforpalestine.org/monthly-challenge">Read the full challenge →</a></p>
+      </div>
+      <figure class="ch">
+        <div class="ch-card" aria-hidden="true">
+          <div class="ch-bar"><span class="ch-logo">The Consent</span><span class="ch-section">World</span></div>
+          <p class="ch-head">
+            38<span class="ch-caret ch-caret--start"><span class="ch-ins">Palestinians</span></span> killed in Gaza strike<span class="ch-caret"><span class="ch-ins">by Israel</span></span>
+            <span class="ch-strike">as tensions rise</span>, <span class="ch-strike">health ministry says</span> <span class="ch-fix">genocide continues</span>
+          </p>
+        </div>
+        <figcaption class="ch-caption">
+          <span class="sr-only">Illustrative headline from a fictional outlet: “38 killed in Gaza strike as tensions rise, health ministry says”. Corrected: “38 Palestinians killed in Gaza strike by Israel, genocide continues”.</span>
+          <span aria-hidden="true">Illustrative headline, corrected</span>
+        </figcaption>
+      </figure>
+    </div>
+
+    <h3 style="margin-top:56px;font-size:26px">Some questions you can consider</h3>
+    <ol class="questions">
+      <li><span class="q">01</span>How do we ensure that the Palestinian struggle is top of mind for the general audience even if mainstream media tries to bury it?</li>
+      <li><span class="q">02</span>How do we develop alternative ways of sharing news using analog media, local distribution, peer-to-peer sharing and other channels which are resistant to outside control and influence?</li>
+      <li><span class="q">03</span>How do we detect and raise awareness about pro-Israel and/or anti-Palestine bias and framings in mainstream media?</li>
+      <li><span class="q">04</span>How do we encourage critical thinking among readers and viewers and ensure they are aware of the positionality of the news sources they are following?</li>
+      <li><span class="q">05</span>How do we fact-check claims in mainstream media and trace their origin to state PR messaging when they are the product of hasbara?</li>
+      <li><span class="q">06</span>How do we expose the unofficial editorial guidelines which media outlets use in their reporting on Palestine and detect regurgitations of Israeli talking points?</li>
+      <li><span class="q">07</span>How do we build a public ownership atlas of news media, showing who owns which outlet and their documented political donations and advocacy funding?</li>
+      <li><span class="q">08</span>How do we track the changes in coverage of Palestine and Israel by news outlets like CNN and CBS before and after the takeover by Paramount?</li>
+      <li><span class="q">09</span>How do we document and support journalists penalized for pro-Palestine reporting and encourage reporters to maintain journalistic integrity?</li>
+    </ol>
+  </div>
+</section>
+
+<!-- What teams can build -->
+<section id="build" aria-labelledby="build-heading">
+  <div class="wrap">
+    <div class="media">
+      <div>
+        <h2 id="build-heading">What teams can build</h2>
+        <p class="lede">We want to see a working prototype or a campaign which addresses the challenge head on. Most of these need writing, research or design more than code:</p>
+        <ul class="ticks">
+          <li>A guide to spotting biased headlines</li>
+          <li>A letter campaign to one newsroom</li>
+          <li>A printable news sheet for community spaces</li>
+          <li>A first map of who owns major outlets</li>
+          <li>A before-and-after look at one outlet's coverage</li>
+          <li>A support page for penalized journalists</li>
+          <li>For developers: a browser plugin that flags framing</li>
+        </ul>
+        <h3 style="margin-top:28px">Pitch structure (3 minutes per team)</h3>
+        <ol class="numbered">
+          <li>Who it helps</li>
+          <li>The problem</li>
+          <li>What you built</li>
+          <li>The next step</li>
+        </ol>
+      </div>
+      <figure>
+        <img src="https://hackathon2026.techforpalestine.org/events/team-laptop.webp"
+          srcset="https://hackathon2026.techforpalestine.org/events/team-laptop-small.webp 640w, https://hackathon2026.techforpalestine.org/events/team-laptop.webp 1600w"
+          sizes="(min-width:1024px) 600px, 92vw" width="1600" height="1067" loading="lazy"
+          alt="Participants discussing ideas together around a laptop">
+      </figure>
+    </div>
+
+    <h3 style="margin-top:64px;font-size:26px">Incubator projects we already support</h3>
+    <p class="muted" style="max-width:70ch;margin:8px 0 0">These projects already work on this challenge. Look at them before you start, or build something one of them needs.</p>
+    <div class="projects">
+      <a href="https://newscord.org/"><img src="https://projecthub.techforpalestine.org/public-objects/logos/logo-30e31a3f-6bb1-4b-1780428233816.webp" alt="" width="48" height="48" loading="lazy"><span><b>NewsCord</b>Shows how different sources frame the same story, with one-click email campaigns to outlets.</span></a>
+      <a href="https://www.mediabiasmeter.com/"><img src="https://projecthub.techforpalestine.org/public-objects/logos/logo-6db77d43-e6ef-4e-1763403473822.webp" alt="" width="48" height="48" loading="lazy"><span><b>Media-Bias-Meter</b>Exposing anti-Palestine media bias through language, lies by omission and disproportionate coverage and deflection.</span></a>
+      <a href="https://mediabiaswatch.org"><img src="https://projecthub.techforpalestine.org/public-objects/logos/logo-34f88a4d-49ae-44-1778001480000.png" alt="" width="48" height="48" loading="lazy"><span><b>MediaBiasWatch</b>Leveraging advertiser boycotts to influence biased media.</span></a>
+      <a href="https://techforpalestine.org/projects/bias-proof-236"><span class="letter" aria-hidden="true">B</span><span><b>Bias-Proof</b>A media bias highlighting tool that looks up an outlet's affiliations and runs fact checks on articles.</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- Choose your role -->
+<section class="pale" aria-labelledby="role-heading">
+  <div class="wrap media flip">
+    <div>
+      <h2 id="role-heading">Choose your role</h2>
+      <p class="lede">You don't need a team or an idea. Each attendee will choose a role when registering:</p>
+      <ul class="ticks">
+        <li><b>Engineer:</b> software developers, data analysts, AI experts</li>
+        <li><b>Creative:</b> designers, UI/UX professionals, copywriters</li>
+        <li><b>Strategist:</b> executives, consultants, campaigners</li>
+        <li><b>Media and research:</b> journalists, media researchers, fact-checkers</li>
+        <li><b>Observers:</b> coming just to observe without joining a team</li>
+      </ul>
+    </div>
+    <figure>
+      <img src="https://hackathon2026.techforpalestine.org/events/workshop-conversation.webp"
+        srcset="https://hackathon2026.techforpalestine.org/events/workshop-conversation-small.webp 640w, https://hackathon2026.techforpalestine.org/events/workshop-conversation.webp 1600w"
+        sizes="(min-width:1024px) 600px, 92vw" width="1600" height="1067" loading="lazy"
+        alt="Participants in conversation at a workshop table while one person stands and gestures">
+    </figure>
+  </div>
+</section>
+
+<!-- Agenda -->
+<section id="agenda" aria-labelledby="agenda-heading">
+  <div class="wrap">
+    <h2 id="agenda-heading">Agenda</h2>
+    <p class="lede">Saturday, November 28, on the Tech for Palestine Discord.</p>
+    <table class="agenda">
+      <thead><tr><th scope="col">CET</th><th scope="col">ET</th><th scope="col">Palestine</th><th scope="col">Session</th></tr></thead>
+      <tbody>
+        <tr><td>15:00</td><td>9:00 am</td><td>16:00</td><td>Opening and challenge introduction</td></tr>
+        <tr><td>15:15</td><td>9:15 am</td><td>16:15</td><td>Attendees share their ideas in a 60-second pitch, then teams come together</td></tr>
+        <tr><td>15:45</td><td>9:45 am</td><td>16:45</td><td>Build time in team voice channels</td></tr>
+        <tr><td>17:30</td><td>11:30 am</td><td>18:30</td><td>Submissions close</td></tr>
+        <tr><td>17:45</td><td>11:45 am</td><td>18:45</td><td>Team pitches (3 minutes per team)</td></tr>
+        <tr><td>18:30</td><td>12:30 pm</td><td>19:30</td><td>Every team starts its Incubator application</td></tr>
+        <tr><td>19:00</td><td>1:00 pm</td><td>20:00</td><td>Close</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- How to join -->
+<section id="join" class="stone" aria-labelledby="join-heading">
+  <div class="wrap">
+    <h2 id="join-heading">How to join</h2>
+    <ol class="steps">
+      <li><h3>Register</h3><p>Register for free and choose your role. Registration closes Friday, November 27 at 18:00 CET (12:00 pm ET).</p></li>
+      <li><h3>Join our Discord</h3><p>Join the <a href="https://techforpalestine.org/discord-invite">Tech for Palestine Discord</a> before November 28.</p></li>
+      <li><h3>Come to the brainstorm</h3><p>Optional: pitch an idea and meet teammates at the <a href="https://us06web.zoom.us/meeting/register/VcASwZtkTsmH3poubwJcOw">brainstorming session on November 20th</a>.</p></li>
+      <li><h3>Apply for the Incubator</h3><p>Before you log off, your team applies at <a href="https://projecthub.techforpalestine.org/apply">projecthub.techforpalestine.org/apply</a>.</p></li>
+    </ol>
+    <div class="ctas" style="margin-top:32px">
+      <a class="btn btn-green" href="[QGIV REGISTRATION LINK]">Register for free</a>
+    </div>
+  </div>
+</section>
+
+<!-- Incubator -->
+<section id="incubator" class="deep on-green" aria-labelledby="incubator-heading">
+  <div class="wrap media">
+    <div>
+      <h2 id="incubator-heading">We want more projects in the Incubator</h2>
+      <p class="lede">To date, the Tech for Palestine Incubator has supported more than 100 projects working on different aspects of Palestinian liberation. Projects approved on this challenge join a small cohort with tailored support.</p>
+      <h3 style="margin-top:28px">How we help projects succeed</h3>
+      <ul class="ticks">
+        <li><b>Volunteer network:</b> access to skilled volunteers: engineers, marketers, designers and more.</li>
+        <li><b>Launch support:</b> engineering, security and marketing expertise, and a network of 10k+ early testers.</li>
+        <li><b>Mentorship:</b> strategy sessions and optional weekly dedicated mentors.</li>
+      </ul>
+      <div class="stats">
+        <div><b>100+</b>Projects incubated</div>
+        <div><b>3,000+</b>Worldwide volunteers</div>
+      </div>
+      <div class="ctas" style="margin-top:28px">
+        <a class="btn btn-white" href="[QGIV REGISTRATION LINK]">Register for free</a>
+        <a class="btn btn-outline-white" href="https://projecthub.techforpalestine.org/apply">Apply for this challenge</a>
+      </div>
+    </div>
+    <figure>
+      <img src="https://hackathon2026.techforpalestine.org/events/community-group.webp"
+        srcset="https://hackathon2026.techforpalestine.org/events/community-group-small.webp 640w, https://hackathon2026.techforpalestine.org/events/community-group.webp 1600w"
+        sizes="(min-width:1024px) 600px, 92vw" width="1600" height="1067" loading="lazy"
+        alt="Community members posing together on a stage in front of a Tech for Palestine screen">
+      <figcaption>Tech for Palestine Conference, Barcelona, April 11, 2026.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" aria-labelledby="faq-heading">
+  <div class="wrap">
+    <h2 id="faq-heading">FAQ</h2>
+    <div class="faq">
+      <details><summary>Do I need to know how to code?</summary><p>No. Campaigns, research, datasets, designs and plans all count.</p></details>
+      <details><summary>Do I need a team or an idea?</summary><p>No. Teams form at the start. If you have an idea, pitch it in 60 seconds and people can join you.</p></details>
+      <details><summary>Do I need to be a Tech for Palestine member?</summary><p>No. The build session is open to everyone. You need a Discord account.</p></details>
+      <details><summary>Is there a prize?</summary><p>No. Each team gets feedback on its pitch, and the goal is an Incubator application from every team.</p></details>
+      <details><summary>Which tools can we use?</summary><p>Any tools you like, including AI tools.</p></details>
+      <details><summary>Will it be recorded?</summary><p>No. Key points from the opening are posted as text on Discord.</p></details>
+      <details><summary>Is there a code of conduct?</summary><p>Yes. All attendees agree to the <a href="[CODE OF CONDUCT LINK]">code of conduct</a> when they register.</p></details>
+      <details><summary>Can't make it on November 28?</summary><p>Apply for the Incubator with your idea directly. Applications are open on a rolling basis.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- Closing -->
+<section class="closing green on-green" aria-labelledby="closing-heading">
+  <div class="wrap">
+    <h2 id="closing-heading">Have an idea that gets Palestine's story past the gatekeepers?</h2>
+    <p>Build it with us on Saturday, November 28, then bring it to the Incubator.</p>
+    <div class="ctas">
+      <a class="btn btn-white" href="[QGIV REGISTRATION LINK]">Register for free</a>
+      <a class="btn btn-outline-white" href="https://projecthub.techforpalestine.org/apply">Apply for the Incubator</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p>Tech for Palestine is first and foremost a builder and incubator for advocacy projects, rallying thousands of volunteers from across the tech world, all committed to Palestinian liberation.</p>
+    <p><a href="https://techforpalestine.org/">techforpalestine.org</a> · <a href="https://techforpalestine.org/monthly-challenge">November Challenge</a> · <a href="https://techforpalestine.org/discord-invite">Join our Discord</a> · <a href="https://techforpalestine.org/events">Events</a></p>
+    <p>© 2026 Tech for Palestine, a registered 501(c)(3) nonprofit.</p>
+  </div>
+</footer>
+
+<script>
+  // Add the event time in the visitor's own time zone, unless it is already shown (CET, ET or Palestine).
+  (function () {
+    try {
+      var tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      var shown = ['Europe/Madrid', 'Europe/Berlin', 'Europe/Paris', 'Europe/Brussels', 'Europe/Amsterdam', 'Europe/Rome', 'America/New_York', 'America/Toronto', 'Asia/Gaza', 'Asia/Hebron'];
+      if (!tz || shown.indexOf(tz) !== -1) return;
+      var start = new Date('2026-11-28T14:00:00Z');
+      var end = new Date('2026-11-28T18:00:00Z');
+      var time = new Intl.DateTimeFormat(undefined, { hour: 'numeric', minute: '2-digit' });
+      var day = new Intl.DateTimeFormat(undefined, { weekday: 'long', month: 'long', day: 'numeric' });
+      var text = day.format(start) + ', ' + time.format(start) + ' to ';
+      if (day.format(end) !== day.format(start)) text += day.format(end) + ', ';
+      text += time.format(end);
+      document.getElementById('local-time').textContent = 'Your time (' + tz.replace(/_/g, ' ') + '): ' + text;
+    } catch (e) { /* keep the static text */ }
+  })();
+</script>
+</body>
+</html>

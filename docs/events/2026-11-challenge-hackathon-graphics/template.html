@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<title>Build session social graphics</title>
+<!--
+  Social graphics for the November challenge build session. Draft, 2026-11-17.
+  Modeled on T4P's own social posts (Bluesky, read 2026-11-17): the
+  "Hackathon @ MozFest" post, the November challenge post and the
+  community-call posts. Style notes: docs/brand.md, "Social graphics".
+  Render all sizes with ./render.sh. Edit EVENT below when the date or time
+  changes, then re-render. Open template.html?g=<name> to see one graphic.
+-->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Caveat:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root { --green:#1f8a3b; --red:#e4312b; --ink:#141414; --cream:#f7f3ec; }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { background: #000; }
+  body { font-family: Montserrat, system-ui, sans-serif; -webkit-font-smoothing: antialiased; color: var(--ink); }
+  .g { position: relative; overflow: hidden; background: var(--cream); }
+  .abs { position: absolute; }
+  .up { text-transform: uppercase; }
+  .logo img { display: block; }
+  /* Thin green bars with a red accent, as on T4P's challenge posts */
+  .bar { position: absolute; left: 0; right: 0; height: 14px; background: var(--green); }
+  .bar::after { content: ""; position: absolute; left: 0; width: 22%; height: 100%; background: var(--red); }
+  /* Slanted green banner with a handwritten "present", as on the MozFest post */
+  .banner { background: var(--green); border-radius: 10px 60px 10px 10px; transform: rotate(-1.5deg); }
+  .present { font-family: Caveat, cursive; font-weight: 700; color: var(--ink); transform: rotate(-8deg); display: inline-block; }
+  .tag { display: inline-block; background: var(--green); color: #fff; font-weight: 800; text-transform: uppercase; padding: 10px 18px; }
+  .pill { display: inline-block; background: var(--red); color: #fff; font-weight: 800; text-transform: uppercase; padding: 18px 40px; border-radius: 4px; }
+  .corner { position: absolute; right: 0; bottom: 0; background: var(--ink); color: #fff; clip-path: polygon(100% 0, 100% 100%, 0 100%); }
+  .corner div { position: absolute; right: 40px; bottom: 34px; text-align: right; font-weight: 900; text-transform: uppercase; }
+  .photo { position: absolute; display: block; object-fit: cover; }
+  .hills { position: absolute; left: 0; bottom: 0; width: 100%; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+  // Event values. Change these, then run ./render.sh.
+  var EVENT = {
+    dateShort: 'November 28',
+    dateLong: 'Saturday, November 28',
+    times: '9 AM ET | 3 PM CET | 4 PM Palestine'
+  };
+  var LOGO = 'https://techforpalestine.org/images/new-homepage/t4p-logo.webp';
+  var PHOTO = 'https://hackathon2026.techforpalestine.org/events/';
+  // T4P's own short form of the challenge question, from its November challenge post.
+  var QUESTION = 'How do we combat hasbara and pro-Israel bias in mainstream media?';
+  var HILLS = function (h) {
+    return '<svg class="hills" viewBox="0 0 1080 ' + h + '" height="' + h + '" preserveAspectRatio="none"><path fill="#1f8a3b" d="M0 ' + (h * .45) +
+      ' C 120 ' + (h * .30) + ', 210 ' + (h * .38) + ', 300 ' + (h * .34) + ' S 470 ' + (h * .10) + ', 560 ' + (h * .22) + ' S 700 ' + (h * .40) + ', 800 ' + (h * .26) +
+      ' S 960 ' + (h * .02) + ', 1080 ' + (h * .18) + ' L1080 ' + h + ' L0 ' + h + ' Z"/></svg>';
+  };
+  var logo = function (style, h) { return '<div class="abs logo" style="' + style + '"><img src="' + LOGO + '" style="height:' + h + 'px" alt="Tech for Palestine"></div>'; };
+  var div = function (style, html) { return '<div class="abs" style="' + style + '">' + (html || '') + '</div>'; };
+  // The MozFest hero photo already carries T4P's red shape and red arrow; multiply drops its white edges.
+  var hero = function (style) { return '<img class="photo" src="' + PHOTO + 'hackathon-hero-balanced.webp" style="object-fit:contain;mix-blend-mode:multiply;' + style + '" alt="">'; };
+
+  var GRAPHICS = {
+    // 1. Main post, after T4P's "Hackathon @ MozFest" post
+    'carousel-1-announce': [1080, 1350, function () {
+      return '<div class="g" style="width:1080px;height:1350px">' +
+        logo('left:50px;top:30px', 128) +
+        div('left:60px;top:200px;width:900px;height:290px', '<div class="banner" style="width:100%;height:100%"></div>') +
+        div('left:76px;top:178px', '<span class="present" style="font-size:64px">present</span>') +
+        div('left:60px;top:240px;width:900px;text-align:center;color:#fff', '<p class="up" style="font-size:84px;font-weight:900;line-height:1.08">Online<br>Build session</p>') +
+        div('left:60px;top:520px;width:960px', '<p class="up" style="font-size:50px;font-weight:600;letter-spacing:.01em">' + EVENT.dateShort + ' // T4P Discord</p>') +
+        hero('left:20px;top:600px;width:900px;height:650px') +
+        '<div class="corner" style="width:560px;height:480px"><div><p style="font-size:62px;line-height:1">Free<br>entry</p><p style="font-size:30px;line-height:1.2;margin-top:14px">No coding needed<br>Registration<br>link in caption</p></div></div>' +
+        '</div>';
+    }],
+    // 2. The challenge, after T4P's November challenge post
+    'carousel-2-challenge': [1080, 1350, function () {
+      return '<div class="g" style="width:1080px;height:1350px">' +
+        '<img class="photo" src="' + PHOTO + 'community-gathering.webp" style="inset:0;width:100%;height:100%;opacity:.16;filter:grayscale(.3)" alt="">' +
+        '<div class="bar" style="top:0"></div><div class="bar" style="bottom:0"></div>' +
+        logo('left:0;right:0;top:70px;display:flex;justify-content:center', 150) +
+        div('left:70px;right:70px;top:290px;text-align:center', '<p class="up" style="font-size:76px;font-weight:900;line-height:1.08">' + QUESTION + '</p>') +
+        div('left:110px;right:110px;top:720px;text-align:center', '<p style="font-size:38px;font-weight:700;line-height:1.4">Join a team and spend an afternoon turning an idea into a campaign, a guide, a dataset or a tool. You don&#39;t need to code.</p>') +
+        div('left:0;right:0;top:1050px;text-align:center', '<p style="font-size:36px;font-weight:700">Find out more in the caption.</p>') +
+        div('right:70px;bottom:70px', '<span class="tag" style="font-size:32px">November challenge</span>') +
+        '</div>';
+    }],
+    // 3. Date and time, after T4P's community-call posts
+    'carousel-3-details': [1080, 1350, function () {
+      return '<div class="g" style="width:1080px;height:1350px">' +
+        logo('left:0;right:0;top:70px;display:flex;justify-content:center', 160) +
+        div('left:60px;right:60px;top:300px;text-align:center', '<p class="up" style="font-size:78px;font-weight:900;line-height:1.05">Online build session</p>' +
+          '<p class="up" style="font-size:52px;font-weight:800;margin-top:24px">' + EVENT.dateLong + '</p>' +
+          '<p class="up" style="font-size:40px;font-weight:700;margin-top:14px">' + EVENT.times + '</p>') +
+        div('left:0;right:0;top:640px;text-align:center', '<span class="pill" style="font-size:46px">Register now!</span>') +
+        div('left:60px;right:60px;top:800px;text-align:center', '<p class="up" style="font-size:34px;font-weight:800">Happening on the T4P Discord</p>' +
+          '<p class="up" style="font-size:30px;font-weight:600;margin-top:12px">Free · No team or coding needed</p>') +
+        HILLS(330) +
+        '</div>';
+    }],
+    // 4. How it works
+    'carousel-4-join': [1080, 1350, function () {
+      var steps = [['Register', 'Link in caption. Choose your role.'], ['Join our Discord', 'techforpalestine.org/discord-invite'],
+        ['Build with a team', 'A campaign, a guide, a dataset or a tool'], ['Apply to the Incubator', 'Before you log off']];
+      var list = steps.map(function (s, i) {
+        return '<div style="display:flex;gap:28px;align-items:center;margin-bottom:40px"><span style="flex:none;width:96px;height:96px;border-radius:50%;background:' + (i % 2 ? 'var(--red)' : 'var(--green)') + ';color:#fff;display:grid;place-items:center;font-size:52px;font-weight:900">' + (i + 1) + '</span>' +
+          '<div><p class="up" style="font-size:46px;font-weight:900;line-height:1.05">' + s[0] + '</p><p style="font-size:30px;font-weight:600;margin-top:6px">' + s[1] + '</p></div></div>';
+      }).join('');
+      return '<div class="g" style="width:1080px;height:1350px">' +
+        '<div class="bar" style="top:0"></div>' +
+        logo('left:56px;top:56px', 130) +
+        div('left:64px;top:230px', '<p class="up" style="font-size:80px;font-weight:900;line-height:1">How it works</p>') +
+        div('left:64px;top:390px;width:960px', list) +
+        div('left:0;right:0;bottom:0;height:150px;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;text-align:center',
+          '<p class="up" style="font-size:24px;font-weight:700;line-height:1.5">Join the movement behind 100+ projects for Palestine<br>techforpalestine.org/membership</p>') +
+        '</div>';
+    }],
+    // Banner, 1600 x 900: X, Bluesky, Discord, LinkedIn link posts
+    'banner': [1600, 900, function () {
+      return '<div class="g" style="width:1600px;height:900px">' +
+        logo('left:50px;top:30px', 120) +
+        div('left:60px;top:200px;width:800px;height:250px', '<div class="banner" style="width:100%;height:100%"></div>') +
+        div('left:74px;top:176px', '<span class="present" style="font-size:58px">present</span>') +
+        div('left:60px;top:232px;width:800px;text-align:center;color:#fff', '<p class="up" style="font-size:72px;font-weight:900;line-height:1.08">Online<br>Build session</p>') +
+        div('left:60px;top:490px;width:820px', '<p class="up" style="font-size:44px;font-weight:600">' + EVENT.dateShort + ' // T4P Discord</p>' +
+          '<p class="up" style="font-size:32px;font-weight:700;margin-top:18px">' + EVENT.times + '</p>' +
+          '<p class="up" style="font-size:30px;font-weight:800;margin-top:18px;color:#1f8a3b">No coding needed</p>') +
+        div('left:60px;top:720px', '<span class="pill" style="font-size:34px">Register: link in caption</span>') +
+        hero('right:20px;top:110px;width:720px;height:700px') +
+        '</div>';
+    }],
+    // Story, 1080 x 1920
+    'story': [1080, 1920, function () {
+      return '<div class="g" style="width:1080px;height:1920px">' +
+        logo('left:0;right:0;top:130px;display:flex;justify-content:center', 160) +
+        div('left:70px;top:340px;width:940px;height:300px', '<div class="banner" style="width:100%;height:100%"></div>') +
+        div('left:86px;top:316px', '<span class="present" style="font-size:66px">present</span>') +
+        div('left:70px;top:384px;width:940px;text-align:center;color:#fff', '<p class="up" style="font-size:90px;font-weight:900;line-height:1.08">Online<br>Build session</p>') +
+        div('left:0;right:0;top:690px;text-align:center', '<p class="up" style="font-size:52px;font-weight:600">' + EVENT.dateShort + ' // T4P Discord</p>' +
+          '<p class="up" style="font-size:36px;font-weight:700;margin-top:16px">' + EVENT.times + '</p>') +
+        hero('left:40px;top:860px;width:1000px;height:720px') +
+        div('left:0;right:0;top:1640px;text-align:center', '<span class="pill" style="font-size:46px;padding:24px 48px">Free · No coding needed</span>') +
+        '</div>';
+    }]
+  };
+
+  var name = new URLSearchParams(location.search).get('g') || 'carousel-1-announce';
+  document.getElementById('root').innerHTML = GRAPHICS[name][2]();
+</script>
+</body>
+</html>
