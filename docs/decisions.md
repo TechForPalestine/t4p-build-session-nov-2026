@@ -50,3 +50,31 @@ of "build session". It pairs with T4P's 2026-11-20 "brainstorming session"
 and reads as open to people who do not code. Applied to the page, graphics,
 captions and plan; file names keep "hackathon". Matt and Iva still to
 confirm with the rest of the launch questions.
+
+## 2026-11-19: Build session confirmed
+Matt Roberts and Iva Gumnishka confirmed, as Andrés reported: Saturday
+2026-11-28, 15:00 to 19:00 CET (9:00 am to 1:00 pm ET), on the T4P
+Discord, named "build session", with the page text and captions as
+written. Supersedes: the open platform question in the 2026-11-16 entry
+(it is Discord), and the "proposal" status of the 2026-11-17 entries on
+the date, the name and the wording. US spelling stays, as Andrés decided
+on 2026-11-17. Matt, 2026-11-19, on Mattermost: no
+YouTube stream, so people do not feel pressure; the Discord Stage channel
+is enough.
+
+## 2026-11-19: No registration form; Discord code of conduct
+Andrés: people join through the T4P Discord invite
+(https://techforpalestine.org/discord-invite) and check in on the day in
+`#build-session-checkin`. No Qgiv event, so no registration data to hold
+or delete. Supersedes the Qgiv option in the 2026-11-17 wording entry.
+The code of conduct is the T4P Discord one:
+https://discord.com/channels/1186702814341234740/1191850426170093638/1381667623560937472
+
+## 2026-11-19: Page moves to buildwith.techforpalestine.org
+Andrés: the repo moved to TechForPalestine/t4p-build-session-nov-2026 and
+the page is served from it at https://buildwith.techforpalestine.org with
+GitHub Pages. The page moved to `index.html` in the repo root, with a
+`CNAME` file; older entries that name
+`docs/events/2026-11-challenge-hackathon-page.html` mean `index.html`. It needs a Cloudflare DNS record and Pages switched on
+(plan, "Page hosting"). The Netlify draft comes down once the new address
+works.
