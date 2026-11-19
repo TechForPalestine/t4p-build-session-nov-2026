@@ -75,6 +75,8 @@
   .btn-green:hover { background: var(--grove-hover); }
   .btn-white { background: #fff; color: var(--grove-deep); }
   .btn-white:hover { background: var(--first-light); }
+  .btn-outline-green { border: 1px solid var(--grove); color: var(--grove-deep); background: #fff; }
+  .btn-outline-green:hover { background: var(--first-light); }
   .btn-outline-white { border: 1px solid rgba(255,255,255,.7); color: #fff; }
   .btn-outline-white:hover { background: #fff; color: var(--grove-deep); border-color: #fff; }
   .ctas { display: flex; flex-wrap: wrap; gap: 12px; }
@@ -178,7 +180,7 @@
 
   /* Steps */
   .steps { list-style: none; padding: 0; margin: 32px 0 0; display: grid; grid-template-columns: minmax(0,1fr); gap: 14px; counter-reset: step; }
-  @media (min-width: 900px) { .steps { grid-template-columns: repeat(4, minmax(0,1fr)); } }
+  @media (min-width: 900px) { .steps { grid-template-columns: repeat(3, minmax(0,1fr)); } }
   .steps li { counter-increment: step; background: #fff; border-radius: 20px; padding: 22px; border: 1px solid var(--first-light-edge); overflow-wrap: anywhere; }
   .steps li::before { content: counter(step); display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--grove); color: #fff; font-weight: 800; margin-bottom: 12px; }
   .steps p { margin: 6px 0 0; }
@@ -243,7 +245,7 @@
       <p class="local-time" id="local-time">14:00 to 18:00 UTC</p>
       <div class="ctas">
         <a class="btn btn-white" href="https://discord.com/invite/kSKjRQ2mzZ" data-goatcounter-click="join-discord" data-goatcounter-title="Join on Discord">Join on Discord</a>
-        <a class="btn btn-outline-white" href="#challenge">See the challenge</a>
+        <a class="btn btn-outline-white" href="#calendar">Add to calendar</a>
       </div>
     </div>
     <img class="photo"
@@ -400,16 +402,26 @@
 <!-- How to join -->
 <section id="join" class="stone" aria-labelledby="join-heading">
   <div class="wrap">
-    <h2 id="join-heading">How to join</h2>
+    <h2 id="join-heading">How to sign up</h2>
+    <p class="lede">Sign-up happens on Discord. It takes about two minutes.</p>
     <ol class="steps">
-      <li><h3>Join our Discord</h3><p>Join the <a href="https://discord.com/invite/kSKjRQ2mzZ" data-goatcounter-click="join-discord" data-goatcounter-title="Join on Discord">Tech for Palestine Discord</a> for free before November 28.</p></li>
-      <li><h3>Click "Interested"</h3><p>In Discord, open <b>Events</b> at the top of the channel list and click <b>Interested</b> on "Online build session". This is how you sign up, and Discord reminds you when it starts.</p></li>
+      <li><h3>Get a Discord account</h3><p>Already have one? Skip this step. If not, create a free account at <a href="https://discord.com/register">discord.com/register</a> or in the Discord app, and confirm your email.</p></li>
+      <li><h3>Join our server</h3><p>Open the <a href="https://discord.com/invite/kSKjRQ2mzZ" data-goatcounter-click="join-discord" data-goatcounter-title="Join on Discord">Tech for Palestine Discord invite</a>, click <b>Accept Invite</b>, then go through the short welcome screen and agree to the server rules.</p></li>
+      <li><h3>Click "Interested"</h3><p>At the top of the channel list, open <b>Events</b>, find "Online build session" and click <b>Interested</b>. This is your sign-up, and Discord notifies you when it starts.</p></li>
+      <li><h3>Add it to your calendar</h3><p>Use the buttons below. The calendar invite has the Discord link and the steps for the day.</p></li>
       <li><h3>Check in on the day</h3><p>From 14:30 CET (8:30 am ET), post your username and role in <b>#build-session-checkin</b>. A moderator opens the build session channels for you.</p></li>
-      <li><h3>Come to the brainstorm</h3><p>Optional: pitch an idea and meet teammates at the <a href="https://us06web.zoom.us/meeting/register/VcASwZtkTsmH3poubwJcOw">brainstorming session on November 20th</a>.</p></li>
       <li><h3>Apply for the Incubator</h3><p>Before you log off, your team applies at <a href="https://projecthub.techforpalestine.org/apply" data-goatcounter-click="apply-incubator" data-goatcounter-title="Incubator application">projecthub.techforpalestine.org/apply</a>.</p></li>
     </ol>
-    <div class="ctas" style="margin-top:32px">
+    <p style="margin-top:24px">Optional: pitch an idea and meet teammates at the <a href="https://us06web.zoom.us/meeting/register/VcASwZtkTsmH3poubwJcOw">brainstorming session on November 20th</a>.</p>
+    <div class="ctas" style="margin-top:24px">
       <a class="btn btn-green" href="https://discord.com/invite/kSKjRQ2mzZ" data-goatcounter-click="join-discord" data-goatcounter-title="Join on Discord">Join on Discord</a>
+    </div>
+    <h3 id="calendar" style="margin-top:40px">Add it to your calendar</h3>
+    <p style="margin:6px 0 16px">Saturday, November 28, 9:00 am to 1:00 pm ET (15:00 to 19:00 CET). The invite includes the Discord link.</p>
+    <div class="ctas">
+      <a class="btn btn-outline-green" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Tech%20for%20Palestine%20online%20build%20session&amp;dates=20261128T140000Z/20261128T180000Z&amp;details=Online%20build%20session%20for%20the%20November%20Incubator%20Challenge.%0A%0A1.%20Join%20the%20Tech%20for%20Palestine%20Discord%3A%20https%3A//discord.com/invite/kSKjRQ2mzZ%0A2.%20In%20Discord%2C%20open%20Events%20and%20click%20Interested%20on%20%22Online%20build%20session%22.%0A3.%20From%2014%3A30%20CET%20%288%3A30%20am%20ET%29%2C%20post%20your%20username%20and%20role%20in%20%23build-session-checkin.%0A%0ADetails%20and%20agenda%3A%20https%3A//buildwith.techforpalestine.org&amp;location=Online%2C%20Tech%20for%20Palestine%20Discord%3A%20https%3A//discord.com/invite/kSKjRQ2mzZ" target="_blank" rel="noopener" data-goatcounter-click="add-calendar-google" data-goatcounter-title="Add to Google Calendar">Google Calendar</a>
+      <a class="btn btn-outline-green" href="https://outlook.live.com/calendar/0/action/compose?rru=addevent&amp;subject=Tech%20for%20Palestine%20online%20build%20session&amp;startdt=2026-11-28T14:00:00Z&amp;enddt=2026-11-28T18:00:00Z&amp;body=Online%20build%20session%20for%20the%20November%20Incubator%20Challenge.%0A%0A1.%20Join%20the%20Tech%20for%20Palestine%20Discord%3A%20https%3A//discord.com/invite/kSKjRQ2mzZ%0A2.%20In%20Discord%2C%20open%20Events%20and%20click%20Interested%20on%20%22Online%20build%20session%22.%0A3.%20From%2014%3A30%20CET%20%288%3A30%20am%20ET%29%2C%20post%20your%20username%20and%20role%20in%20%23build-session-checkin.%0A%0ADetails%20and%20agenda%3A%20https%3A//buildwith.techforpalestine.org&amp;location=Online%2C%20Tech%20for%20Palestine%20Discord%3A%20https%3A//discord.com/invite/kSKjRQ2mzZ" target="_blank" rel="noopener" data-goatcounter-click="add-calendar-outlook" data-goatcounter-title="Add to Outlook.com">Outlook.com</a>
+      <a class="btn btn-outline-green" href="/build-session-2026-11-28.ics" download data-goatcounter-click="add-calendar-ics" data-goatcounter-title="Download .ics">Apple, Outlook app and others (.ics)</a>
     </div>
   </div>
 </section>

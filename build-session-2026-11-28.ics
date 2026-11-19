@@ -1,0 +1,36 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Tech for Palestine//Build session//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:build-session-2026-11-28@buildwith.techforpalestine.org
+DTSTAMP:20261119T120000Z
+SEQUENCE:0
+DTSTART:20261128T140000Z
+DTEND:20261128T180000Z
+SUMMARY:Tech for Palestine online build session
+LOCATION:Online\, Tech for Palestine Discord: https://discord.com/invite/kS
+ KjRQ2mzZ
+URL:https://buildwith.techforpalestine.org
+DESCRIPTION:Tech for Palestine online build session for the November Incuba
+ tor Challenge.\n9:00 am to 1:00 pm ET | 15:00 to 19:00 CET | 16:00 to 20:0
+ 0 Palestine.\n\n1. Join the Tech for Palestine Discord: https://discord.co
+ m/invite/kSKjRQ2mzZ\n2. In Discord\, open Events and click Interested on "
+ Online build session".\n3. From 14:30 CET (8:30 am ET)\, post your usernam
+ e and role in #build-session-checkin.\n\nDetails and agenda: https://build
+ with.techforpalestine.org
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Tech for Palestine online build session
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Build session starts in 30 minutes on Discord
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+END:VCALENDAR

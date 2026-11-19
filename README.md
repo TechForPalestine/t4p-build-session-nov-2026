@@ -5,14 +5,18 @@ the November Incubator challenge: Saturday 2026-11-28, 15:00 to 19:00 CET
 (9 AM to 1 PM ET, 4 PM to 8 PM Palestine), on the T4P Discord. Confirmed
 by Matt and Iva on 2026-11-19.
 
-Page: https://buildwith.techforpalestine.org, served by GitHub Pages from
-`index.html` and `CNAME` in the root of `main`. Setup steps, including the
-DNS record: "Page hosting" in the
+Page: https://buildwith.techforpalestine.org, served by T4P's Cloudflare
+Pages from the root of `main` (no build step). Setup steps: "Page hosting"
+in the
 [organizer plan](docs/events/2026-11-challenge-hackathon.md).
 
 ## Files
 
-1. [index.html](index.html): the event page. One file; logo and photos load
+1. [index.html](index.html): the event page, with
+   [build-session-2026-11-28.ics](build-session-2026-11-28.ics), the
+   calendar invite its "Add to calendar" button downloads, and
+   [_headers](_headers), which makes Cloudflare serve that file as a
+   calendar. One file; logo and photos load
    from T4P's sites, fonts from Google Fonts.
 2. [Organizer plan](docs/events/2026-11-challenge-hackathon.md)
    ([PDF](docs/events/2026-11-challenge-hackathon-plan.pdf)): decisions,
@@ -47,9 +51,10 @@ File names under `docs/` still say "hackathon"; the event is called a
 
 ## Changing the page
 
-Edit `index.html` and merge to `main`; GitHub Pages republishes it. If the
-date or time changes, also change the time zone script at the bottom of
-the page, the captions and the graphics.
+Edit `index.html` and merge to `main`; Cloudflare Pages republishes it. If
+the date or time changes, also change the time zone script at the bottom
+of the page, the calendar links in the "How to sign up" section, the
+`.ics` file (and raise its `SEQUENCE`), the captions and the graphics.
 
 ## Changing the graphics
 

@@ -71,7 +71,9 @@ You don't need a team or to code.
    https://buildwith.techforpalestine.org/?ref=discord
 2. Come to the brainstorming session on Friday, November 20, 2:30 pm ET, to
    meet teammates early: https://us06web.zoom.us/meeting/register/VcASwZtkTsmH3poubwJcOw
-3. On the day, from 8:30 am ET / 14:30 CET, post your username and role in
+3. Add it to your calendar (Google, Outlook or .ics):
+   https://buildwith.techforpalestine.org/?ref=discord#calendar
+4. On the day, from 8:30 am ET / 14:30 CET, post your username and role in
    #build-session-checkin and a moderator opens the build session channels.
 
 ## Members roundup (for Aneta)
@@ -88,7 +90,8 @@ https://buildwith.techforpalestine.org/?ref=roundup
 **Friday, November 27 (all channels):** Tomorrow: our online build session for
 the November Incubator Challenge, 9 AM ET | 3 PM CET | 4 PM Palestine,
 on Discord.
-Join the Discord today and click "Interested" on the event so you are ready.
+Join the Discord today, click "Interested" on the event and add it to your
+calendar so you are ready.
 https://buildwith.techforpalestine.org/?ref=reminder
 
 **Saturday, November 28, at 8:30 am ET / 14:30 CET (Discord only):** The

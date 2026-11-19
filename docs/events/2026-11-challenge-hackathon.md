@@ -52,7 +52,7 @@ All confirmed by Matt and Iva, 2026-11-19, unless a line says otherwise.
 | Lead | Matt |
 | Discord setup, seeded problems, announcements | Andrés |
 | Discord admin (creates the scheduled event, builds the category and role) | To name |
-| Cloudflare DNS for techforpalestine.org (adds the `buildwith` record) | To name |
+| Cloudflare Pages project and the `buildwith` domain | T4P website team |
 | GoatCounter account owner | To name |
 | MC | To name; Matt runs Stage if nobody else does |
 | Moderators (two, online the whole afternoon) | To name |
@@ -60,7 +60,7 @@ All confirmed by Matt and Iva, 2026-11-19, unless a line says otherwise.
 | Incubator contact (explains the application at 18:30) | To name; ask Iva |
 
 Andrés is a volunteer member and holds no T4P accounts. Everything that
-needs a T4P login (Discord admin, Cloudflare, GoatCounter, T4P social
+needs a T4P login (Discord admin, Cloudflare Pages, GoatCounter, T4P social
 accounts) is done by the person Matt names for it; Andrés prepares the
 text and settings.
 | Journalists, researchers or campaigners who drop in on teams | Ask Iva |
@@ -71,7 +71,7 @@ Four numbers. The first comes from the page, the rest from Discord.
 
 | Number | What it counts | Where to read it |
 |--------|----------------|------------------|
-| Page clicks | Clicks on any "Join on Discord" link on the page (`join-discord`), clicks on the Incubator apply links (`apply-incubator`), page visits, and which post sent people (`?ref=` in each caption link) | GoatCounter dashboard: https://t4p-buildwith.goatcounter.com |
+| Page clicks | Clicks on any "Join on Discord" link on the page (`join-discord`), clicks on the Incubator apply links (`apply-incubator`), clicks on the three calendar buttons (`add-calendar-google`, `add-calendar-outlook`, `add-calendar-ics`), page visits, and which post sent people (`?ref=` in each caption link) | GoatCounter dashboard: https://t4p-buildwith.goatcounter.com |
 | Sign-ups | People who clicked "Interested", members or new | The scheduled event in Discord's Events list: the count on the event card, and "Interested" for the list of people |
 | New members from the campaign | People who joined the server through `kSKjRQ2mzZ` | Server Settings > Invites: the "Uses" column for `kSKjRQ2mzZ`, minus the baseline |
 | Attendance | People checked in on the day | Server Settings > Roles: member count of "Build Session Nov 2026" |
@@ -102,30 +102,33 @@ Teams and applications come from `#submissions`: one post per team, and
 
 ## Page hosting
 
-The page is served from this repo with GitHub Pages at
-https://buildwith.techforpalestine.org. As of 2026-11-19 the subdomain has
-no DNS record and Pages is not switched on. To put it live:
+The page is served from this repo by T4P's Cloudflare Pages at
+https://buildwith.techforpalestine.org (T4P's website team, 2026-11-19).
+There is no build step: the site is the repo root as it is. To put it live,
+someone on T4P's website team:
 
-1. Merge to `main`. `index.html` and `CNAME` are in the repo root.
-2. In the repo's Settings > Pages: source "Deploy from a branch", branch
-   `main`, folder `/ (root)`. The custom domain reads
-   `buildwith.techforpalestine.org` from `CNAME`.
-3. In Cloudflare (DNS for techforpalestine.org): add a `CNAME` record,
-   name `buildwith`, target `techforpalestine.github.io`, proxy status
-   "DNS only" until GitHub has issued the certificate.
-4. Back in Settings > Pages, tick "Enforce HTTPS" once it is offered.
-5. Check https://buildwith.techforpalestine.org loads, the buttons open the
-   Discord invite, and a link preview shows `banner.png`.
-6. Take down the old Netlify draft (t4p-nov-hackathon-draft.netlify.app).
+1. Merges this repo's PR to `main`.
+2. In Cloudflare, Workers & Pages: creates a Pages project connected to
+   TechForPalestine/t4p-build-session-nov-2026, production branch `main`,
+   no framework, no build command, output directory `/`.
+3. In the project's Custom domains: adds `buildwith.techforpalestine.org`.
+   Cloudflare creates the DNS record itself, because techforpalestine.org
+   is in the same account.
+4. Checks that https://buildwith.techforpalestine.org loads, the buttons
+   open the Discord invite, the three calendar buttons work, and a link
+   preview shows `banner.png`.
+5. Takes down the old Netlify draft (t4p-nov-hackathon-draft.netlify.app).
 
-GitHub Pages also publishes the rest of the repo under the same domain
+`_headers` makes Cloudflare serve `build-session-2026-11-28.ics` as a
+calendar file that downloads. Every push to `main` republishes the page.
+Cloudflare Pages also publishes the rest of the repo under the same domain
 (this plan, the captions). The repo is public, so nothing new is exposed.
 
 ## Timeline
 
 | Date | Task | Owner |
 |------|------|-------|
-| Thu 11-19 | Page live at buildwith.techforpalestine.org (steps above); challenge page links to it | Cloudflare DNS owner; repo admin merges and switches on Pages |
+| Thu 11-19 | Page live at buildwith.techforpalestine.org (steps above); challenge page links to it | T4P website team |
 | Thu 11-19 | Posts on T4P social (`docs/events/2026-11-challenge-hackathon-copy.md`), an announcement on the T4P Discord, Andrés on LinkedIn | T4P comms, Andrés |
 | Thu 11-19 | Discord scheduled event "Online build session" created: Stage channel `build-session-stage`, Sat 2026-11-28 14:00 to 18:00 UTC, description and page link. Baseline uses of `kSKjRQ2mzZ` noted. GoatCounter account `t4p-buildwith` created | Discord admin, GoatCounter account owner |
 | Fri 11-20 | Discord channels and role built. Announce at the 18:00 CET roundtable and the 20:30 CET brainstorm; note ideas and people looking for teams | Discord admin, Iva, Andrés |

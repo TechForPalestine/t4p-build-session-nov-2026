@@ -94,3 +94,12 @@ on the "Join on Discord" and Incubator links and the `?ref=` of each
 caption link. It counts clicks, not people; names come from the Discord
 event's "Interested" list. The account still has to be created by
 someone at T4P; Andrés holds no T4P accounts (Andrés, 2026-11-19).
+
+## 2026-11-19: Cloudflare Pages, "Add to calendar", Discord sign-up steps
+Andrés: T4P serves the page on Cloudflare Pages, not GitHub Pages; the
+website team sets it up. Supersedes the GitHub Pages and `CNAME` parts of
+the earlier 2026-11-19 entry; `CNAME` is removed. Andrés asked for an "Add
+to calendar" button with the Discord link in the invite, and step-by-step
+Discord sign-up instructions, instead of a registration form with email
+confirmation. The page now has Google Calendar, Outlook.com and `.ics`
+buttons (`build-session-2026-11-28.ics`) and a six-step "How to sign up".
