@@ -37,8 +37,9 @@ All confirmed by Matt and Iva, 2026-11-19, unless a line says otherwise.
   playbook's British English.
 - **No prize.** Pitches get feedback; nothing is judged.
 - **No recording or YouTube stream.** Matt, 2026-11-19: people should not
-  feel pressure. The opening and pitches run on the Discord Stage channel;
-  the opening's key points go in `#build-session-info` as text.
+  feel pressure. The opening and pitches run in `#t4p-hackathons`, as
+  chat, or on a Stage channel if a Discord admin adds one; the opening's
+  key points go in `#t4p-hackathons` as a pinned message.
 - **Tools:** teams use what they like.
 - **Photos:** the page reuses T4P's own Barcelona event photos, already
   published on hackathon2026.techforpalestine.org.
@@ -51,7 +52,7 @@ All confirmed by Matt and Iva, 2026-11-19, unless a line says otherwise.
 |------|--------|
 | Lead | Matt |
 | Discord setup, seeded problems, announcements | Andrés |
-| Discord admin (creates the scheduled event, builds the category and role) | To name |
+| Discord admin (creates the scheduled event, pins the info message, sets slow mode) | To name |
 | Cloudflare Pages project and the `buildwith` domain | T4P website team |
 | GoatCounter account owner | To name |
 | MC | To name; Matt runs Stage if nobody else does |
@@ -74,10 +75,10 @@ Four numbers. The first comes from the page, the rest from Discord.
 | Page clicks | Clicks on any "Join on Discord" link on the page (`join-discord`), clicks on the Incubator apply links (`apply-incubator`), clicks on the three calendar buttons (`add-calendar-google`, `add-calendar-outlook`, `add-calendar-ics`), page visits, and which post sent people (`?ref=` in each caption link) | GoatCounter dashboard: https://t4p-buildwith.goatcounter.com |
 | Sign-ups | People who clicked "Interested", members or new | The scheduled event in Discord's Events list: the count on the event card, and "Interested" for the list of people |
 | New members from the campaign | People who joined the server through `kSKjRQ2mzZ` | Server Settings > Invites: the "Uses" column for `kSKjRQ2mzZ`, minus the baseline |
-| Attendance | People checked in on the day | Server Settings > Roles: member count of "Build Session Nov 2026" |
+| Attendance | People who checked in on the day | The number of people who posted in the check-in thread in `#t4p-hackathons` |
 
-Teams and applications come from `#submissions`: one post per team, and
-"started" in each post.
+Teams and applications come from the team threads in `#t4p-hackathons`:
+one thread per team, with the submission post and "started" in each.
 
 - GoatCounter counts clicks, not people: no cookies, no IP addresses or
   names stored, so no consent banner is needed. It cannot say who
@@ -97,7 +98,7 @@ Teams and applications come from `#submissions`: one post per team, and
   invite and swap it into `index.html` and the captions.
 - Reading the Invites list needs the Manage Server permission. Reading the
   Interested count does not.
-- Log the four numbers in `#mods` on Mon 11-23, Wed 11-25, Fri 11-27 and
+- Log the four numbers in the staff group chat on Mon 11-23, Wed 11-25, Fri 11-27 and
   after the close, for the retro.
 
 ## Page hosting
@@ -130,14 +131,14 @@ Cloudflare Pages also publishes the rest of the repo under the same domain
 |------|------|-------|
 | Thu 11-19 | Page live at buildwith.techforpalestine.org (steps above); challenge page links to it | T4P website team |
 | Thu 11-19 | Posts on T4P social (`docs/events/2026-11-challenge-hackathon-copy.md`), an announcement on the T4P Discord, Andrés on LinkedIn | T4P comms, Andrés |
-| Thu 11-19 | Discord scheduled event "Online build session" created: Stage channel `build-session-stage`, Sat 2026-11-28 14:00 to 18:00 UTC, description and page link. Baseline uses of `kSKjRQ2mzZ` noted. GoatCounter account `t4p-buildwith` created | Discord admin, GoatCounter account owner |
-| Fri 11-20 | Discord channels and role built. Announce at the 18:00 CET roundtable and the 20:30 CET brainstorm; note ideas and people looking for teams | Discord admin, Iva, Andrés |
-| Mon 11-23 | Open `#team-finding` to all members and post seeded problems in it (the nine questions, brainstorm ideas, wishes from the four Incubator media projects). MC, moderators, advisers named. Aneta adds the build session to the members roundup | Andrés, Matt |
-| Wed 11-25 | Dry run on Discord: Stage, voice channels, check-in and role. Reserve Zoom link created | Andrés, MC, moderators |
+| Thu 11-19 | Discord scheduled event "Online build session" created: location `#t4p-hackathons` (or the Stage channel, if one is added), Sat 2026-11-28 14:00 to 18:00 UTC, description and page link. Baseline uses of `kSKjRQ2mzZ` noted. GoatCounter account `t4p-buildwith` created | Discord admin, GoatCounter account owner |
+| Fri 11-20 | Pinned info message in `#t4p-hackathons` (agenda, code of conduct, submission template, page link). Announce at the 18:00 CET roundtable and the 20:30 CET brainstorm; note ideas and people looking for teams | Discord admin, Iva, Andrés |
+| Mon 11-23 | Post seeded problems in `#t4p-hackathons`, one thread each (the nine questions, brainstorm ideas, wishes from the four Incubator media projects). MC, moderators, advisers named. Aneta adds the build session to the members roundup | Andrés, Matt |
+| Wed 11-25 | Dry run in `#t4p-hackathons`: check-in thread, team threads, and the Stage channel if there is one. Reserve Zoom link created | Andrés, MC, moderators |
 | Thu 11-26 | US Thanksgiving: nothing sent | |
 | Fri 11-27 | Reminder on all channels. Brief moderators and advisers | Andrés, Matt |
 | Sat 11-28 | 8:30 am ET reminder on Discord, then the build session | All |
-| Sun 11-29 | Thank-you post in `#build-session-info`: apply link, feedback form | Andrés |
+| Sun 11-29 | Thank-you post in `#t4p-hackathons`: apply link, feedback form | Andrés |
 | Mon 11-30 to Fri 12-04 | Follow up with every team that has not finished its application | Incubator contact |
 | By Fri 12-04 | Retro: numbers against targets, what to change; update `docs/playbook.md`. Iva may be at the Amman summit on 12-03 | Matt, Andrés |
 
@@ -145,12 +146,12 @@ Cloudflare Pages also publishes the rest of the repo under the same domain
 
 | CET | ET | What | Who |
 |-----|----|------|-----|
-| 14:30 | 8:30 am | Staff in `#mods` and on Stage; sound check. Check-in opens | All staff |
+| 14:30 | 8:30 am | Staff in their private group chat; check-in thread opens in `#t4p-hackathons` | All staff |
 | 15:00 | 9:00 am | Opening: the challenge, what a good project has (user, problem, build, next step), the four Incubator media projects, code of conduct | MC, Matt or Iva |
 | 15:15 | 9:15 am | 60-second idea pitches; seeded problems read out | MC |
-| 15:35 | 9:35 am | Teams that formed during the week confirm, and the rest form, in `#team-finding` (up to 5 per team); moderators assign voice channels and place people who came alone | Moderators |
-| 15:45 | 9:45 am | Each team posts its user and problem in `#submissions`, then builds. Advisers and invited journalists or campaigners visit rooms | Teams, advisers |
-| 16:45 | 10:45 am | Two-minute check-in on Stage | MC |
+| 15:35 | 9:35 am | Teams that formed during the week confirm, and the rest form, in `#t4p-hackathons` (up to 5 per team); moderators open one thread per team and place people who came alone | Moderators |
+| 15:45 | 9:45 am | Each team posts its user and problem in its thread, then builds. Advisers and invited journalists or campaigners visit the threads | Teams, advisers |
+| 16:45 | 10:45 am | Two-minute check-in in `#t4p-hackathons` | MC |
 | 17:30 | 11:30 am | Submissions close | Teams |
 | 17:45 | 11:45 am | Pitches, 3 minutes each (2 minutes if more than 8 teams) | MC |
 | 18:30 | 12:30 pm | Every team opens its Incubator application and writes "started" in its submission post | Incubator contact |
@@ -158,40 +159,36 @@ Cloudflare Pages also publishes the rest of the repo under the same domain
 
 ## Setup
 
-**Check-in (replaces registration).** From 14:30 CET people post their
-Discord username and role (Engineer, Creative, Strategist, Media and
-research, Observer) in `#build-session-checkin`. A moderator gives them the
-"Build Session Nov 2026" role, which opens the category. Checking in means
-agreeing to the T4P Discord code of conduct. Check-in stays open all
-afternoon. No personal data is collected outside Discord.
+**Check-in (replaces registration).** At 14:30 CET a moderator starts a
+"Check-in" thread in `#t4p-hackathons`. People post their Discord username
+and role (Engineer, Creative, Strategist, Media and research, Observer)
+there. Checking in means agreeing to the T4P Discord code of conduct. It
+stays open all afternoon. No personal data is collected outside Discord.
 
-**Scheduled event.** Created in the Stage channel `build-session-stage`
-so it shows in every member's Events list. Title "Online build session",
+**Scheduled event.** Location `#t4p-hackathons` ("Somewhere else" in
+Discord's event form), or the Stage channel if an admin adds one, so it
+shows in every member's Events list. Title "Online build session",
 Saturday 2026-11-28, 14:00 to 18:00 UTC. Description: one line on the
 challenge, the times in ET, CET and Palestine time, and
 https://buildwith.techforpalestine.org. The Discord announcement links the
 event; once the event exists its link (discord.com/events/...) can also go
 on the page next to "Join on Discord".
 
-**Discord.** The Discord is where the build session is organized, before
-the day as well as on it. One temporary category. `#build-session-info`,
-`#build-session-checkin` and `#team-finding` are visible to every server
-member from Mon 11-23, so people can pitch ideas and form teams during the
-week. The other channels (Stage, team voice channels, `#help`,
-`#submissions`) are visible only to the "Build Session Nov 2026" role,
-given at check-in. `#team-finding` has slow mode on and at least one
-moderator checking it daily, because the theme carries a doxxing risk.
+**Discord.** Everything happens in one existing channel, `#t4p-hackathons`,
+before the day and on it (Andrés, 2026-11-19). It uses threads instead of
+extra channels:
 
-| Channel | Use |
-|---------|-----|
-| `#build-session-info` (read-only) | Agenda, code of conduct, submission template, opening notes |
-| `#build-session-checkin` | Username and role, to get the role |
-| `#team-finding` (forum) | One post per seeded problem; open to all members from Mon 11-23 so teams can form before the day |
-| `#help` | Questions for advisers |
-| `#submissions` (forum) | One post per team |
-| `build-session-stage` (Stage) | Opening and pitches |
-| `team-1` to `team-8` (voice) | One per team; add more on the day if needed |
-| `#mods` (private) | Staff only |
+| Thread or message | Use |
+|-------------------|-----|
+| Pinned message | Agenda, code of conduct link, submission template, page link, opening notes |
+| One thread per seeded problem (from Mon 11-23) | People pitch ideas and form teams during the week |
+| "Check-in" thread (on the day) | Username and role |
+| One thread per team (on the day) | The team's work, questions for advisers, and its submission post |
+
+A Stage channel for the opening and pitches is optional; Matt, 2026-11-19:
+"chat will be fine, maybe we do the stage". Slow mode on the main channel
+and at least one moderator checking it daily, because the theme carries a
+doxxing risk. Staff coordinate in a private group chat.
 
 **Submission post.** Team and Discord usernames; question (Q01 to Q09) or
 seeded problem; user (one line); problem and how you know; what you built,
@@ -203,11 +200,11 @@ started (yes or not yet).
 
 | If | Then |
 |----|------|
-| Disruption or a raid | Moderators remove roles, lock the category, carry on with people already checked in. Agree before the day who decides a ban |
-| Someone posts personal details of a journalist or participant | Delete it, time the person out, note it in `#mods` |
+| Disruption or a raid | Moderators turn on slow mode or lock `#t4p-hackathons` for a few minutes and carry on in the team threads. Agree before the day who decides a ban |
+| Someone posts personal details of a journalist or participant | Delete it, time the person out, note it in the staff group chat |
 | Discord goes down | Post the reserve Zoom link on T4P's social accounts and at the top of the page |
 | Fewer than 10 people at 15:10 | One or two teams with staff joining; keep the Incubator close |
-| The MC drops out | Matt runs Stage from this run sheet |
+| The MC drops out | Matt runs the afternoon from this run sheet |
 | A team has nothing to show | It pitches user, problem and next step, and still starts an application |
 
 ## After the event

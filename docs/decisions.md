@@ -111,3 +111,10 @@ posts are in his voice. Claude, to match: `#team-finding` opens to every
 server member from Mon 11-23 so teams can form during the week (slow mode,
 a moderator checking daily); the build channels stay behind the check-in
 role.
+
+## 2026-11-19: One Discord channel, #t4p-hackathons
+Andrés: the T4P Discord has one channel for this, `#t4p-hackathons`, and
+everything points people there. Supersedes the separate channels and the
+check-in role in earlier entries. Claude, to match: seeded problems, the
+check-in and each team get a thread in `#t4p-hackathons`; attendance is
+the number of people in the check-in thread; a Stage channel is optional.

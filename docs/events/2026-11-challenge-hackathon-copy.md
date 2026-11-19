@@ -67,11 +67,11 @@ challenge:
 > How do we expose and combat hasbara, pro-Israel bias and Zionist
 > ownership and influence of mainstream news media?
 
-This server is where all of it gets organized. From Monday the 23rd,
-#team-finding has problems to work on, and it's where you pitch an idea
-or find people to build with. On the 28th, 9 AM ET | 3 PM CET | 4 PM
-Palestine, teams build together in voice channels and every team starts
-its Incubator application before logging off. You don't need a team or
+This server is where all of it gets organized, in #t4p-hackathons. From
+Monday the 23rd it has problems to work on, and it's where you pitch an
+idea or find people to build with. On the 28th, 9 AM ET | 3 PM CET | 4 PM
+Palestine, teams build together in their own threads there and every team
+starts its Incubator application before logging off. You don't need a team or
 to code!
 
 To sign up:
@@ -80,7 +80,7 @@ To sign up:
 2. Add it to your calendar:
    https://buildwith.techforpalestine.org/?ref=discord#calendar
 3. On the day, from 8:30 AM ET / 14:30 CET, post your username and role
-   in #build-session-checkin.
+   in the check-in thread in #t4p-hackathons.
 
 Want to meet people early? Come to the brainstorm on Friday, November 20,
 2:30 PM ET: https://us06web.zoom.us/meeting/register/VcASwZtkTsmH3poubwJcOw
@@ -94,8 +94,8 @@ with that post's URL.
 
 Hi all! Could you help spread the word on this one? We're running an
 online build session for the November Incubator challenge, and it's
-organized entirely here on the Discord: teams form in #team-finding from
-Monday the 23rd, and we build together on Saturday, November 28, 9 AM ET |
+organized entirely here on the Discord: teams form in #t4p-hackathons
+from Monday the 23rd, and we build together on Saturday, November 28, 9 AM ET |
 3 PM CET | 4 PM Palestine. It's open to non-members and you don't need to
 code!
 
@@ -124,8 +124,8 @@ calendar so you are ready.
 https://buildwith.techforpalestine.org/?ref=reminder
 
 **Saturday, November 28, at 8:30 am ET / 14:30 CET (Discord only):** The
-build session starts in 30 minutes on the Stage channel. Post your
-username and role in #build-session-checkin to get access.
+build session starts in 30 minutes in #t4p-hackathons. Check in by posting
+your username and role in the check-in thread there.
 
 ## Challenge page section (for T4P to add)
 
@@ -161,8 +161,8 @@ The November Incubator challenge asks: "How do we expose and combat
 hasbara, pro-Israel bias and Zionist ownership and influence of mainstream
 news media?"
 
-All of it happens on the Discord. Problems to work on go up in
-#team-finding from Monday the 23rd, teams form there during the week, and
+All of it happens on the Discord, in #t4p-hackathons. Problems to work on
+go up there from Monday the 23rd, teams form there during the week, and
 on the 28th (9 AM ET | 3 PM CET | 4 PM Palestine) we build together. Every
 team starts its Incubator application before it logs off.
 
