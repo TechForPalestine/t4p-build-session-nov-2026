@@ -4,9 +4,9 @@ Status: final. Approved by Matt and Iva on 2026-11-19
 (`docs/decisions.md`). T4P's wording and US spelling. Rewritten
 2026-11-19 in Andrés's voice and needing only his OK: the Discord
 announcement, the social media channel share request and his LinkedIn
-post. Added after the approval, so show Matt or Iva: one sentence in the
-T4P Instagram and LinkedIn caption ("Teams form on our Discord in the week
-before"). Every post links to the event page,
+post. Rewritten after the approval, so show Matt or Iva: the two T4P social
+captions (Instagram and LinkedIn; X, Bluesky, Mastodon and Threads), which
+now send people to #t4p-hackathons. Every post links to the event page,
 https://buildwith.techforpalestine.org, which links to the Discord invite
 https://discord.com/invite/kSKjRQ2mzZ. People sign up by clicking
 "Interested" on the Discord event and check in on the day.
@@ -29,30 +29,36 @@ follow T4P's posts: ET, CET and Palestine time (UTC+2 on 2026-11-28).
 
 ## T4P: Instagram and LinkedIn (carousel)
 
+T4P's voice, for T4P's accounts. Needs Matt's or Iva's OK (rewritten
+2026-11-19 to name the Discord channel).
+
 How do we expose and combat hasbara, pro-Israel bias and Zionist ownership
 and influence of mainstream news media?
 
-That's the November Incubator Challenge, and on Saturday, November 28 we're
-working on it together in an online build session on the Tech for Palestine
-Discord.
+That's the November Incubator Challenge, and we're building answers
+together on our Discord. Join us in #t4p-hackathons: from Monday,
+November 23 we're posting problems to work on there, and it's where you
+can pitch an idea and find a team.
 
-9 AM ET | 3 PM CET | 4 PM Palestine. Free.
+Then on Saturday, November 28, 9 AM ET | 3 PM CET | 4 PM Palestine, teams
+spend the afternoon turning their ideas into a campaign, a guide, a
+dataset or a tool, and apply to the Incubator before they log off.
 
-Join a team and spend the afternoon turning an idea into something real:
-a guide to spotting biased headlines, a letter campaign to a newsroom, a
-first map of who owns the news, or a tool. You don't need to code.
-Writers, designers, researchers, journalists, organizers and developers
-are all welcome. Teams form on our Discord in the week before, and every
-team leaves with an Incubator application.
+Free and open to everyone. You don't need a team or to code: writers,
+designers, researchers, journalists, organizers and developers are all
+welcome.
 
-Details and how to join: https://buildwith.techforpalestine.org/?ref=t4p-linkedin (Instagram: link in bio)
+Join our Discord and sign up: https://buildwith.techforpalestine.org/?ref=t4p-linkedin
+(Instagram: link in bio, with `?ref=instagram`)
 
 ## T4P: X, Bluesky, Mastodon, Threads (banner)
 
-Online build session for the November Incubator Challenge: Saturday,
-November 28, 9 AM ET | 3 PM CET | 4 PM Palestine, on our Discord.
-Turn an idea into a campaign, a guide, a dataset or a tool, then apply to
-the Incubator. Free, and you don't need to code.
+T4P's voice. Needs Matt's or Iva's OK.
+
+Building for the November Incubator Challenge? Join us in #t4p-hackathons
+on our Discord: teams form there from November 23, and we build together
+on Saturday, November 28, 9 AM ET | 3 PM CET | 4 PM Palestine. Free, and
+you don't need to code.
 https://buildwith.techforpalestine.org/?ref=t4p-short
 
 ## Discord announcement (Andrés, in his voice; banner)
