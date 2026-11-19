@@ -78,3 +78,10 @@ GitHub Pages. The page moved to `index.html` in the repo root, with a
 `docs/events/2026-11-challenge-hackathon-page.html` mean `index.html`. It needs a Cloudflare DNS record and Pages switched on
 (plan, "Page hosting"). The Netlify draft comes down once the new address
 works.
+
+## 2026-11-19: Discord invite and sign-up tracking
+Andrés: the page and posts send people to the Discord invite
+https://discord.com/invite/kSKjRQ2mzZ, and sign-ups are counted. Claude
+proposed the method: sign-up is "Interested" on a Discord scheduled event;
+new members are the invite's uses above a baseline; attendance is the
+check-in role's member count (plan, "Tracking").

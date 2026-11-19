@@ -3,8 +3,9 @@
 Status: final. Approved by Matt and Iva on 2026-11-19
 (`docs/decisions.md`). T4P's wording and US spelling. Andrés's LinkedIn
 post is his own and needs only his OK. Every post links to the event page,
-https://buildwith.techforpalestine.org, which links to the Discord invite. There is no separate
-registration: people join the Discord and check in on the day.
+https://buildwith.techforpalestine.org, which links to the Discord invite
+https://discord.com/invite/kSKjRQ2mzZ. People sign up by clicking
+"Interested" on the Discord event and check in on the day.
 Challenge wording is quoted from https://techforpalestine.org/monthly-challenge.
 If the date or time changes, fix it here and re-render the graphics.
 
@@ -62,7 +63,9 @@ Pitch an idea or join a team, turn it into a campaign, a guide, a dataset
 or a tool in one afternoon, and apply to the Incubator before you log off.
 You don't need a team or to code.
 
-1. Details and agenda: https://buildwith.techforpalestine.org
+1. Click "Interested" on the event (Events, top of the channel list) so we
+   know you're coming and Discord reminds you. Details and agenda:
+   https://buildwith.techforpalestine.org
 2. Come to the brainstorming session on Friday, November 20, 2:30 pm ET, to
    meet teammates early: https://us06web.zoom.us/meeting/register/VcASwZtkTsmH3poubwJcOw
 3. On the day, from 8:30 am ET / 14:30 CET, post your username and role in
@@ -82,7 +85,7 @@ https://buildwith.techforpalestine.org
 **Friday, November 27 (all channels):** Tomorrow: our online build session for
 the November Incubator Challenge, 9 AM ET | 3 PM CET | 4 PM Palestine,
 on Discord.
-Join the Discord today so you are ready.
+Join the Discord today and click "Interested" on the event so you are ready.
 https://buildwith.techforpalestine.org
 
 **Saturday, November 28, at 8:30 am ET / 14:30 CET (Discord only):** The

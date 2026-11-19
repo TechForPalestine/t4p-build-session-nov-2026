@@ -10,12 +10,12 @@ under "Who does what".
 |---|---|
 | What | A free, four-hour online build session for the November Incubator challenge (`docs/challenges/2026-11-media-bias.md`). Iva asked for it on 2026-11-16 |
 | When | Saturday 2026-11-28, 15:00 to 19:00 CET (9:00 am to 1:00 pm ET, 16:00 to 20:00 Palestine, 14:00 to 18:00 UTC) |
-| Where | T4P Discord: https://techforpalestine.org/discord-invite |
-| Who | Anyone, members or not. No registration form: people join the Discord and check in on the day |
+| Where | T4P Discord: https://discord.com/invite/kSKjRQ2mzZ |
+| Who | Anyone, members or not. No registration form: people join the Discord, click "Interested" on the Discord event, and check in on the day |
 | Page | https://buildwith.techforpalestine.org (source: `index.html` in this repo) |
 | Code of conduct | T4P Discord code of conduct: https://discord.com/channels/1186702814341234740/1191850426170093638/1381667623560937472 |
 | Goal | Every team starts an Incubator application (https://projecthub.techforpalestine.org/apply) before it leaves. Barcelona had 6 entries from a much larger crowd, so the application happens during the event, not after |
-| Targets | 30 people checked in, 6 teams, 6 applications started |
+| Targets | 60 "Interested" on the Discord event, 30 people checked in, 6 teams, 6 applications started |
 | Budget | Zero |
 
 ## Decisions
@@ -28,8 +28,10 @@ All confirmed by Matt and Iva, 2026-11-19, unless a line says otherwise.
 - **Date:** Saturday 2026-11-28, 15:00 to 19:00 CET. US Thanksgiving
   weekend; lower US turnout is accepted.
 - **Name:** "build session", not "hackathon".
-- **Joining:** the Discord invite is the registration. There is no Qgiv
-  event and no registration data.
+- **Joining:** people join through https://discord.com/invite/kSKjRQ2mzZ
+  and sign up by clicking "Interested" on a Discord scheduled event. There
+  is no Qgiv event and no registration data outside Discord. Counting:
+  see "Tracking".
 - **Code of conduct:** the T4P Discord code of conduct (link above).
 - **Wording:** T4P's own wording and US spelling. This departs from the
   playbook's British English.
@@ -49,12 +51,35 @@ All confirmed by Matt and Iva, 2026-11-19, unless a line says otherwise.
 |------|--------|
 | Lead | Matt |
 | Discord setup, seeded problems, announcements | Andrés |
-| Discord admin (builds the category and role) | To name |
+| Discord admin (creates the scheduled event, builds the category and role) | To name |
 | MC | To name; Matt runs Stage if nobody else does |
 | Moderators (two, online the whole afternoon) | To name |
 | Advisers (two to four) | To name |
 | Incubator contact (explains the application at 18:30) | To name; ask Iva |
 | Journalists, researchers or campaigners who drop in on teams | Ask Iva |
+
+## Tracking
+
+Three numbers, all read in Discord, no extra tools:
+
+| Number | What it counts | Where to read it |
+|--------|----------------|------------------|
+| Sign-ups | People who clicked "Interested", members or new | The scheduled event in Discord's Events list: the count on the event card, and "Interested" for the list of people |
+| New members from the campaign | People who joined the server through `kSKjRQ2mzZ` | Server Settings > Invites: the "Uses" column for `kSKjRQ2mzZ`, minus the baseline |
+| Attendance | People checked in on the day | Server Settings > Roles: member count of "Build Session Nov 2026" |
+
+Teams and applications come from `#submissions`: one post per team, and
+"started" in each post.
+
+- The invite `kSKjRQ2mzZ` existed before this event (created by pbiggar,
+  lands in `#introductions`, never expires). Note its uses count on the
+  day the page goes live; the campaign's number is the increase. For a
+  count that only this event adds to, a Discord admin can create a new
+  invite and swap it into `index.html` and the captions.
+- Reading the Invites list needs the Manage Server permission. Reading the
+  Interested count does not.
+- Log the three numbers in `#mods` on Mon 11-23, Wed 11-25, Fri 11-27 and
+  after the close, for the retro.
 
 ## Page hosting
 
@@ -83,6 +108,7 @@ GitHub Pages also publishes the rest of the repo under the same domain
 |------|------|-------|
 | Thu 11-19 | Page live at buildwith.techforpalestine.org (steps above); challenge page links to it | Andrés, T4P admin with Cloudflare access |
 | Thu 11-19 | Posts on T4P social (`docs/events/2026-11-challenge-hackathon-copy.md`), an announcement on the T4P Discord, Andrés on LinkedIn | T4P comms, Andrés |
+| Thu 11-19 | Discord scheduled event "Online build session" created: Stage channel `build-session-stage`, Sat 2026-11-28 14:00 to 18:00 UTC, description and page link. Baseline uses of `kSKjRQ2mzZ` noted | Discord admin, Andrés |
 | Fri 11-20 | Discord channels and role built. Announce at the 18:00 CET roundtable and the 20:30 CET brainstorm; note ideas and people looking for teams | Discord admin, Iva, Andrés |
 | Mon 11-23 | Post seeded problems in `#team-finding` (the nine questions, brainstorm ideas, wishes from the four Incubator media projects). MC, moderators, advisers named. Aneta adds the build session to the members roundup | Andrés, Matt |
 | Wed 11-25 | Dry run on Discord: Stage, voice channels, check-in and role. Reserve Zoom link created | Andrés, MC, moderators |
@@ -116,6 +142,14 @@ research, Observer) in `#build-session-checkin`. A moderator gives them the
 "Build Session Nov 2026" role, which opens the category. Checking in means
 agreeing to the T4P Discord code of conduct. Check-in stays open all
 afternoon. No personal data is collected outside Discord.
+
+**Scheduled event.** Created in the Stage channel `build-session-stage`
+so it shows in every member's Events list. Title "Online build session",
+Saturday 2026-11-28, 14:00 to 18:00 UTC. Description: one line on the
+challenge, the times in ET, CET and Palestine time, and
+https://buildwith.techforpalestine.org. The Discord announcement links the
+event; once the event exists its link (discord.com/events/...) can also go
+on the page next to "Join on Discord".
 
 **Discord.** One temporary category, visible only to the "Build Session
 Nov 2026" role, except `#build-session-info` and `#build-session-checkin`,
