@@ -60,10 +60,11 @@ All confirmed by Matt and Iva, 2026-11-19, unless a line says otherwise.
 
 ## Tracking
 
-Three numbers, all read in Discord, no extra tools:
+Four numbers. The first comes from the page, the rest from Discord.
 
 | Number | What it counts | Where to read it |
 |--------|----------------|------------------|
+| Page clicks | Clicks on any "Join on Discord" link on the page (`join-discord`), clicks on the Incubator apply links (`apply-incubator`), page visits, and which post sent people (`?ref=` in each caption link) | GoatCounter dashboard: https://t4p-buildwith.goatcounter.com |
 | Sign-ups | People who clicked "Interested", members or new | The scheduled event in Discord's Events list: the count on the event card, and "Interested" for the list of people |
 | New members from the campaign | People who joined the server through `kSKjRQ2mzZ` | Server Settings > Invites: the "Uses" column for `kSKjRQ2mzZ`, minus the baseline |
 | Attendance | People checked in on the day | Server Settings > Roles: member count of "Build Session Nov 2026" |
@@ -71,6 +72,16 @@ Three numbers, all read in Discord, no extra tools:
 Teams and applications come from `#submissions`: one post per team, and
 "started" in each post.
 
+- GoatCounter counts clicks, not people: no cookies, no IP addresses or
+  names stored, so no consent banner is needed. It cannot say who
+  clicked. Names of people signed up are in the Discord event's
+  "Interested" list. Ad blockers hide some visits, so treat the number as
+  a minimum.
+- GoatCounter account: create it at https://www.goatcounter.com/signup
+  with the code `t4p-buildwith`, using an email T4P can reach. Free for
+  non-commercial sites. Until the account exists the page works as normal
+  and nothing is counted. In the account's settings, the dashboard can be
+  made public so Matt and Iva can read it without a login.
 - The invite `kSKjRQ2mzZ` existed before this event (created by pbiggar,
   lands in `#introductions`, never expires). Note its uses count on the
   day the page goes live; the campaign's number is the increase. For a
@@ -78,7 +89,7 @@ Teams and applications come from `#submissions`: one post per team, and
   invite and swap it into `index.html` and the captions.
 - Reading the Invites list needs the Manage Server permission. Reading the
   Interested count does not.
-- Log the three numbers in `#mods` on Mon 11-23, Wed 11-25, Fri 11-27 and
+- Log the four numbers in `#mods` on Mon 11-23, Wed 11-25, Fri 11-27 and
   after the close, for the retro.
 
 ## Page hosting
@@ -108,7 +119,7 @@ GitHub Pages also publishes the rest of the repo under the same domain
 |------|------|-------|
 | Thu 11-19 | Page live at buildwith.techforpalestine.org (steps above); challenge page links to it | Andrés, T4P admin with Cloudflare access |
 | Thu 11-19 | Posts on T4P social (`docs/events/2026-11-challenge-hackathon-copy.md`), an announcement on the T4P Discord, Andrés on LinkedIn | T4P comms, Andrés |
-| Thu 11-19 | Discord scheduled event "Online build session" created: Stage channel `build-session-stage`, Sat 2026-11-28 14:00 to 18:00 UTC, description and page link. Baseline uses of `kSKjRQ2mzZ` noted | Discord admin, Andrés |
+| Thu 11-19 | Discord scheduled event "Online build session" created: Stage channel `build-session-stage`, Sat 2026-11-28 14:00 to 18:00 UTC, description and page link. Baseline uses of `kSKjRQ2mzZ` noted. GoatCounter account `t4p-buildwith` created | Discord admin, Andrés |
 | Fri 11-20 | Discord channels and role built. Announce at the 18:00 CET roundtable and the 20:30 CET brainstorm; note ideas and people looking for teams | Discord admin, Iva, Andrés |
 | Mon 11-23 | Post seeded problems in `#team-finding` (the nine questions, brainstorm ideas, wishes from the four Incubator media projects). MC, moderators, advisers named. Aneta adds the build session to the members roundup | Andrés, Matt |
 | Wed 11-25 | Dry run on Discord: Stage, voice channels, check-in and role. Reserve Zoom link created | Andrés, MC, moderators |

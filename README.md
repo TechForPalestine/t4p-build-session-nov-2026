@@ -40,6 +40,8 @@ File names under `docs/` still say "hackathon"; the event is called a
 - Join: https://discord.com/invite/kSKjRQ2mzZ. Sign-up is the
   "Interested" button on the Discord scheduled event; there is no form
 - Code of conduct: https://discord.com/channels/1186702814341234740/1191850426170093638/1381667623560937472
+- Click counts: https://t4p-buildwith.goatcounter.com (GoatCounter; see
+  "Tracking" in the plan)
 - Incubator application: https://projecthub.techforpalestine.org/apply
 - Challenge: https://techforpalestine.org/monthly-challenge
 

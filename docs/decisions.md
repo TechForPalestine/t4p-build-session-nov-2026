@@ -85,3 +85,11 @@ https://discord.com/invite/kSKjRQ2mzZ, and sign-ups are counted. Claude
 proposed the method: sign-up is "Interested" on a Discord scheduled event;
 new members are the invite's uses above a baseline; attendance is the
 check-in role's member count (plan, "Tracking").
+
+## 2026-11-19: Click counting on the page with GoatCounter
+Andrés asked for a light, non-intrusive count of who clicks to join.
+Claude chose GoatCounter (site code `t4p-buildwith`): one script, no
+cookies, no personal data, free for non-commercial use. It counts clicks
+on the "Join on Discord" and Incubator links and the `?ref=` of each
+caption link. It counts clicks, not people; names come from the Discord
+event's "Interested" list. The account still has to be created.

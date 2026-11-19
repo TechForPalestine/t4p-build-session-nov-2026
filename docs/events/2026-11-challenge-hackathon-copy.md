@@ -6,6 +6,9 @@ post is his own and needs only his OK. Every post links to the event page,
 https://buildwith.techforpalestine.org, which links to the Discord invite
 https://discord.com/invite/kSKjRQ2mzZ. People sign up by clicking
 "Interested" on the Discord event and check in on the day.
+Each link carries `?ref=<channel>` so GoatCounter shows which post people
+came from; keep it when posting. Instagram's link in bio uses
+`?ref=instagram`.
 Challenge wording is quoted from https://techforpalestine.org/monthly-challenge.
 If the date or time changes, fix it here and re-render the graphics.
 
@@ -37,7 +40,7 @@ first map of who owns the news, or a tool. You don't need to code.
 Writers, designers, researchers, journalists, organizers and developers
 are all welcome. Every team leaves with an Incubator application.
 
-Details and how to join: https://buildwith.techforpalestine.org (Instagram: link in bio)
+Details and how to join: https://buildwith.techforpalestine.org/?ref=t4p-linkedin (Instagram: link in bio)
 
 ## T4P: X, Bluesky, Mastodon, Threads (banner)
 
@@ -45,7 +48,7 @@ Online build session for the November Incubator Challenge: Saturday,
 November 28, 9 AM ET | 3 PM CET | 4 PM Palestine, on our Discord.
 Turn an idea into a campaign, a guide, a dataset or a tool, then apply to
 the Incubator. Free, and you don't need to code.
-https://buildwith.techforpalestine.org
+https://buildwith.techforpalestine.org/?ref=t4p-short
 
 ## T4P Discord announcement (banner)
 
@@ -65,7 +68,7 @@ You don't need a team or to code.
 
 1. Click "Interested" on the event (Events, top of the channel list) so we
    know you're coming and Discord reminds you. Details and agenda:
-   https://buildwith.techforpalestine.org
+   https://buildwith.techforpalestine.org/?ref=discord
 2. Come to the brainstorming session on Friday, November 20, 2:30 pm ET, to
    meet teammates early: https://us06web.zoom.us/meeting/register/VcASwZtkTsmH3poubwJcOw
 3. On the day, from 8:30 am ET / 14:30 CET, post your username and role in
@@ -78,7 +81,7 @@ You don't need a team or to code.
 with a team for an afternoon (a campaign, a guide, a dataset or a tool;
 no coding needed) and leave with an Incubator application. Open
 to members and non-members, so bring people. Details and how to join:
-https://buildwith.techforpalestine.org
+https://buildwith.techforpalestine.org/?ref=roundup
 
 ## Reminders
 
@@ -86,7 +89,7 @@ https://buildwith.techforpalestine.org
 the November Incubator Challenge, 9 AM ET | 3 PM CET | 4 PM Palestine,
 on Discord.
 Join the Discord today and click "Interested" on the event so you are ready.
-https://buildwith.techforpalestine.org
+https://buildwith.techforpalestine.org/?ref=reminder
 
 **Saturday, November 28, at 8:30 am ET / 14:30 CET (Discord only):** The
 build session starts in 30 minutes on the Stage channel. Post your
@@ -101,7 +104,7 @@ Work on this challenge with a team on the Tech for Palestine Discord,
 campaign, a guide, a dataset or a tool, and apply to the Incubator with it
 before you log off. Free, and you don't need a team or to code.
 
-[Details and how to join](https://buildwith.techforpalestine.org)
+[Details and how to join](https://buildwith.techforpalestine.org/?ref=challenge-page)
 
 ## Andrés's LinkedIn (his voice, his OK)
 
@@ -120,6 +123,6 @@ before it logs off, so the idea keeps going after the afternoon ends.
 You don't need a team or to write code. Journalists, researchers,
 designers and campaigners are as useful here as developers.
 
-Details and how to join: https://buildwith.techforpalestine.org
+Details and how to join: https://buildwith.techforpalestine.org/?ref=andres-linkedin
 
 Attach `carousel-1-announce.png` or the full carousel.
