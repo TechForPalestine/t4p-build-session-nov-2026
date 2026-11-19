@@ -76,6 +76,24 @@ You don't need a team or to code.
 4. On the day, from 8:30 am ET / 14:30 CET, post your username and role in
    #build-session-checkin and a moderator opens the build session channels.
 
+## Discord social media channel: share request (Andrés, as himself)
+
+Post after T4P's LinkedIn post is up; replace the last line's link with
+that post's URL.
+
+Hi all! We're running an online build session for the November Incubator
+Challenge on Saturday, November 28, 9 AM ET | 3 PM CET | 4 PM Palestine,
+here on the T4P Discord. It's free and open to non-members, and you don't
+need to code.
+
+Could you share it with your networks? Page with sign-up steps and an "Add
+to calendar" button: https://buildwith.techforpalestine.org/?ref=discord-share
+
+Graphics to attach are in the event repo (carousel, banner, story):
+https://github.com/TechForPalestine/t4p-build-session-nov-2026/tree/main/docs/events/2026-11-challenge-hackathon-graphics
+
+Resharing T4P's LinkedIn post helps most: <link to T4P's LinkedIn post>
+
 ## Members roundup (for Aneta)
 
 **Online build session, Saturday, November 28, 9 AM ET | 3 PM CET |
@@ -100,14 +118,28 @@ username and role in #build-session-checkin to get access.
 
 ## Challenge page section (for T4P to add)
 
-**Online build session: Saturday, November 28**
+Mockup on a copy of the live page:
+`docs/events/2026-11-challenge-page-mockup/` (`index.html`, and
+`hero.png` and `build-session-section.png` to show the website team). It
+adds a card under the November 20 brainstorm card, in the same style, and a
+third hero button, "Build session on November 28th", that jumps to it.
 
-Work on this challenge with a team on the Tech for Palestine Discord,
-9 AM ET | 3 PM CET | 4 PM Palestine. Turn an idea into a
+Card text:
+
+**Nov 28, Saturday · 9am ET**
+
+**Join our online build session!**
+
+Work on this challenge with a team on the Tech for Palestine Discord, from
+9am to 1pm ET (3pm to 7pm CET, 4pm to 8pm Palestine). Turn an idea into a
 campaign, a guide, a dataset or a tool, and apply to the Incubator with it
 before you log off. Free, and you don't need a team or to code.
 
-[Details and how to join](https://buildwith.techforpalestine.org/?ref=challenge-page)
+Buttons:
+- "Sign up for the build session":
+  https://buildwith.techforpalestine.org/?ref=challenge-page
+- "Add to calendar":
+  https://buildwith.techforpalestine.org/?ref=challenge-page#calendar
 
 ## Andrés's LinkedIn (his voice, his OK)
 

@@ -27,11 +27,15 @@ in the
 4. [Social graphics](docs/events/2026-11-challenge-hackathon-graphics/):
    a four-slide carousel (1080 x 1350), a banner (1600 x 900, also the
    page's link preview) and a story (1080 x 1920).
-5. [docs/brand.md](docs/brand.md): T4P's fonts, colors, components and
+5. [Challenge page mockup](docs/events/2026-11-challenge-page-mockup/):
+   a copy of techforpalestine.org/monthly-challenge (2026-11-19) with a
+   proposed build session card and hero button, for T4P's website team.
+   Open `index.html` (it loads T4P's live stylesheet) or see the PNGs.
+6. [docs/brand.md](docs/brand.md): T4P's fonts, colors, components and
    voice, read from techforpalestine.org and T4P's social posts.
-6. [docs/challenges/2026-11-media-bias.md](docs/challenges/2026-11-media-bias.md):
+7. [docs/challenges/2026-11-media-bias.md](docs/challenges/2026-11-media-bias.md):
    notes on the November challenge. Quote the live page for anything public.
-7. [docs/decisions.md](docs/decisions.md): dated decisions.
+8. [docs/decisions.md](docs/decisions.md): dated decisions.
 
 The plan mentions `docs/playbook.md`. That is a summary of Matt's T4P
 Hackathon Playbook in Notion and is not included here.
