@@ -1,8 +1,12 @@
 # November challenge build session: captions and public text
 
 Status: final. Approved by Matt and Iva on 2026-11-19
-(`docs/decisions.md`). T4P's wording and US spelling. Andrés's LinkedIn
-post is his own and needs only his OK. Every post links to the event page,
+(`docs/decisions.md`). T4P's wording and US spelling. Rewritten
+2026-11-19 in Andrés's voice and needing only his OK: the Discord
+announcement, the social media channel share request and his LinkedIn
+post. Added after the approval, so show Matt or Iva: one sentence in the
+T4P Instagram and LinkedIn caption ("Teams form on our Discord in the week
+before"). Every post links to the event page,
 https://buildwith.techforpalestine.org, which links to the Discord invite
 https://discord.com/invite/kSKjRQ2mzZ. People sign up by clicking
 "Interested" on the Discord event and check in on the day.
@@ -38,7 +42,8 @@ Join a team and spend the afternoon turning an idea into something real:
 a guide to spotting biased headlines, a letter campaign to a newsroom, a
 first map of who owns the news, or a tool. You don't need to code.
 Writers, designers, researchers, journalists, organizers and developers
-are all welcome. Every team leaves with an Incubator application.
+are all welcome. Teams form on our Discord in the week before, and every
+team leaves with an Incubator application.
 
 Details and how to join: https://buildwith.techforpalestine.org/?ref=t4p-linkedin (Instagram: link in bio)
 
@@ -50,49 +55,55 @@ Turn an idea into a campaign, a guide, a dataset or a tool, then apply to
 the Incubator. Free, and you don't need to code.
 https://buildwith.techforpalestine.org/?ref=t4p-short
 
-## T4P Discord announcement (banner)
+## Discord announcement (Andrés, in his voice; banner)
 
-Post in the announcements channel. Keep `@everyone` only if the server's
-admins allow it.
+Post in the announcements channel, or ask whoever runs it to. Keep
+`@everyone` only if the server's admins allow it.
 
-@everyone We're running an online build session here on Saturday, November 28,
-9 AM ET | 3 PM CET | 4 PM Palestine, for the November Incubator
-Challenge:
+@everyone Hey everyone! On Saturday, November 28 we're running an online
+build session right here on the Discord for the November Incubator
+challenge:
 
 > How do we expose and combat hasbara, pro-Israel bias and Zionist
 > ownership and influence of mainstream news media?
 
-Pitch an idea or join a team, turn it into a campaign, a guide, a dataset
-or a tool in one afternoon, and apply to the Incubator before you log off.
-You don't need a team or to code.
+This server is where all of it gets organized. From Monday the 23rd,
+#team-finding has problems to work on, and it's where you pitch an idea
+or find people to build with. On the 28th, 9 AM ET | 3 PM CET | 4 PM
+Palestine, teams build together in voice channels and every team starts
+its Incubator application before logging off. You don't need a team or
+to code!
 
-1. Click "Interested" on the event (Events, top of the channel list) so we
-   know you're coming and Discord reminds you. Details and agenda:
-   https://buildwith.techforpalestine.org/?ref=discord
-2. Come to the brainstorming session on Friday, November 20, 2:30 pm ET, to
-   meet teammates early: https://us06web.zoom.us/meeting/register/VcASwZtkTsmH3poubwJcOw
-3. Add it to your calendar (Google, Outlook or .ics):
+To sign up:
+1. Click "Interested" on the "Online build session" event (Events, top of
+   the channel list). Discord reminds you when it starts.
+2. Add it to your calendar:
    https://buildwith.techforpalestine.org/?ref=discord#calendar
-4. On the day, from 8:30 am ET / 14:30 CET, post your username and role in
-   #build-session-checkin and a moderator opens the build session channels.
+3. On the day, from 8:30 AM ET / 14:30 CET, post your username and role
+   in #build-session-checkin.
 
-## Discord social media channel: share request (Andrés, as himself)
+Want to meet people early? Come to the brainstorm on Friday, November 20,
+2:30 PM ET: https://us06web.zoom.us/meeting/register/VcASwZtkTsmH3poubwJcOw
 
-Post after T4P's LinkedIn post is up; replace the last line's link with
-that post's URL.
+Agenda and details: https://buildwith.techforpalestine.org/?ref=discord
 
-Hi all! We're running an online build session for the November Incubator
-Challenge on Saturday, November 28, 9 AM ET | 3 PM CET | 4 PM Palestine,
-here on the T4P Discord. It's free and open to non-members, and you don't
-need to code.
+## Discord social media channel: share request (Andrés, in his voice)
 
-Could you share it with your networks? Page with sign-up steps and an "Add
-to calendar" button: https://buildwith.techforpalestine.org/?ref=discord-share
+Post after T4P's LinkedIn post is up; replace the last line's placeholder
+with that post's URL.
 
-Graphics to attach are in the event repo (carousel, banner, story):
-https://github.com/TechForPalestine/t4p-build-session-nov-2026/tree/main/docs/events/2026-11-challenge-hackathon-graphics
+Hi all! Could you help spread the word on this one? We're running an
+online build session for the November Incubator challenge, and it's
+organized entirely here on the Discord: teams form in #team-finding from
+Monday the 23rd, and we build together on Saturday, November 28, 9 AM ET |
+3 PM CET | 4 PM Palestine. It's open to non-members and you don't need to
+code!
 
-Resharing T4P's LinkedIn post helps most: <link to T4P's LinkedIn post>
+Sign-up steps and "Add to calendar": https://buildwith.techforpalestine.org/?ref=discord-share
+
+Graphics (carousel, banner, story): https://github.com/TechForPalestine/t4p-build-session-nov-2026/tree/main/docs/events/2026-11-challenge-hackathon-graphics
+
+Resharing the LinkedIn post helps most: <link to the LinkedIn post>
 
 ## Members roundup (for Aneta)
 
@@ -143,21 +154,22 @@ Buttons:
 
 ## Andrés's LinkedIn (his voice, his OK)
 
-I'm helping organize an online build session for Tech for Palestine on
-Saturday, November 28, 9 AM ET | 3 PM CET | 4 PM Palestine, on
-their Discord.
+On Saturday, November 28, Tech for Palestine is running an online build
+session on its Discord, and I'm helping organize it!
 
-This month's Incubator challenge asks: "How do we expose and combat
+The November Incubator challenge asks: "How do we expose and combat
 hasbara, pro-Israel bias and Zionist ownership and influence of mainstream
 news media?"
 
-At the Barcelona hackathon in October, lots of people came and six
-entries were submitted. This time every team starts its Incubator application
-before it logs off, so the idea keeps going after the afternoon ends.
+All of it happens on the Discord. Problems to work on go up in
+#team-finding from Monday the 23rd, teams form there during the week, and
+on the 28th (9 AM ET | 3 PM CET | 4 PM Palestine) we build together. Every
+team starts its Incubator application before it logs off.
 
-You don't need a team or to write code. Journalists, researchers,
-designers and campaigners are as useful here as developers.
+You don't need to code. Journalists, researchers, designers and
+campaigners are as useful here as developers.
 
-Details and how to join: https://buildwith.techforpalestine.org/?ref=andres-linkedin
+Join the Discord and sign up here: https://buildwith.techforpalestine.org/?ref=andres-linkedin
 
-Attach `carousel-1-announce.png` or the full carousel.
+Attach `carousel-1-announce.png` or the full carousel. About 110 words.
+

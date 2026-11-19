@@ -132,7 +132,7 @@ Cloudflare Pages also publishes the rest of the repo under the same domain
 | Thu 11-19 | Posts on T4P social (`docs/events/2026-11-challenge-hackathon-copy.md`), an announcement on the T4P Discord, Andrés on LinkedIn | T4P comms, Andrés |
 | Thu 11-19 | Discord scheduled event "Online build session" created: Stage channel `build-session-stage`, Sat 2026-11-28 14:00 to 18:00 UTC, description and page link. Baseline uses of `kSKjRQ2mzZ` noted. GoatCounter account `t4p-buildwith` created | Discord admin, GoatCounter account owner |
 | Fri 11-20 | Discord channels and role built. Announce at the 18:00 CET roundtable and the 20:30 CET brainstorm; note ideas and people looking for teams | Discord admin, Iva, Andrés |
-| Mon 11-23 | Post seeded problems in `#team-finding` (the nine questions, brainstorm ideas, wishes from the four Incubator media projects). MC, moderators, advisers named. Aneta adds the build session to the members roundup | Andrés, Matt |
+| Mon 11-23 | Open `#team-finding` to all members and post seeded problems in it (the nine questions, brainstorm ideas, wishes from the four Incubator media projects). MC, moderators, advisers named. Aneta adds the build session to the members roundup | Andrés, Matt |
 | Wed 11-25 | Dry run on Discord: Stage, voice channels, check-in and role. Reserve Zoom link created | Andrés, MC, moderators |
 | Thu 11-26 | US Thanksgiving: nothing sent | |
 | Fri 11-27 | Reminder on all channels. Brief moderators and advisers | Andrés, Matt |
@@ -148,7 +148,7 @@ Cloudflare Pages also publishes the rest of the repo under the same domain
 | 14:30 | 8:30 am | Staff in `#mods` and on Stage; sound check. Check-in opens | All staff |
 | 15:00 | 9:00 am | Opening: the challenge, what a good project has (user, problem, build, next step), the four Incubator media projects, code of conduct | MC, Matt or Iva |
 | 15:15 | 9:15 am | 60-second idea pitches; seeded problems read out | MC |
-| 15:35 | 9:35 am | Teams of up to 5 form in `#team-finding`; moderators assign voice channels and place people who came alone | Moderators |
+| 15:35 | 9:35 am | Teams that formed during the week confirm, and the rest form, in `#team-finding` (up to 5 per team); moderators assign voice channels and place people who came alone | Moderators |
 | 15:45 | 9:45 am | Each team posts its user and problem in `#submissions`, then builds. Advisers and invited journalists or campaigners visit rooms | Teams, advisers |
 | 16:45 | 10:45 am | Two-minute check-in on Stage | MC |
 | 17:30 | 11:30 am | Submissions close | Teams |
@@ -173,15 +173,20 @@ https://buildwith.techforpalestine.org. The Discord announcement links the
 event; once the event exists its link (discord.com/events/...) can also go
 on the page next to "Join on Discord".
 
-**Discord.** One temporary category, visible only to the "Build Session
-Nov 2026" role, except `#build-session-info` and `#build-session-checkin`,
-which every server member can see.
+**Discord.** The Discord is where the build session is organized, before
+the day as well as on it. One temporary category. `#build-session-info`,
+`#build-session-checkin` and `#team-finding` are visible to every server
+member from Mon 11-23, so people can pitch ideas and form teams during the
+week. The other channels (Stage, team voice channels, `#help`,
+`#submissions`) are visible only to the "Build Session Nov 2026" role,
+given at check-in. `#team-finding` has slow mode on and at least one
+moderator checking it daily, because the theme carries a doxxing risk.
 
 | Channel | Use |
 |---------|-----|
 | `#build-session-info` (read-only) | Agenda, code of conduct, submission template, opening notes |
 | `#build-session-checkin` | Username and role, to get the role |
-| `#team-finding` (forum) | One post per seeded problem |
+| `#team-finding` (forum) | One post per seeded problem; open to all members from Mon 11-23 so teams can form before the day |
 | `#help` | Questions for advisers |
 | `#submissions` (forum) | One post per team |
 | `build-session-stage` (Stage) | Opening and pitches |

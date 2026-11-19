@@ -103,3 +103,11 @@ to calendar" button with the Discord link in the invite, and step-by-step
 Discord sign-up instructions, instead of a registration form with email
 confirmation. The page now has Google Calendar, Outlook.com and `.ics`
 buttons (`build-session-2026-11-28.ics`) and a six-step "How to sign up".
+
+## 2026-11-19: The Discord is where the build session is organized
+Andrés: posts say plainly that the build session is organized on the T4P
+Discord, before the day as well as on it, and the Discord and LinkedIn
+posts are in his voice. Claude, to match: `#team-finding` opens to every
+server member from Mon 11-23 so teams can form during the week (slow mode,
+a moderator checking daily); the build channels stay behind the check-in
+role.
