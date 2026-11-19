@@ -57,8 +57,7 @@ Join our Discord and sign up: https://buildwith.techforpalestine.org/?ref=t4p-li
 T4P's voice. Needs Matt's or Iva's OK.
 
 Building for the November Incubator Challenge? Join us in #t4p-hackathons
-on our Discord: teams form there from November 23, and we build together
-on Saturday, November 28, 9 AM ET | 3 PM CET | 4 PM Palestine. Free, and
+on our Discord, and we build together on Saturday, November 28, 9 AM ET | 3 PM CET | 4 PM Palestine. Free, and
 you don't need to code.
 https://buildwith.techforpalestine.org/?ref=t4p-short
 
@@ -75,9 +74,8 @@ challenge:
 > ownership and influence of mainstream news media?
 
 This server is where all of it gets organized, in #t4p-hackathons. From
-Monday the 23rd it has problems to work on, and it's where you pitch an
-idea or find people to build with. On the 28th, 9 AM ET | 3 PM CET | 4 PM
-Palestine, teams build together in their own threads there and every team
+Monday the 23rd it has problems to work on. On the 28th, 9 AM ET | 3 PM
+CET | 4 PM Palestine, teams build together in their own threads there and every team
 starts its Incubator application before logging off. You don't need a team or
 to code!
 
@@ -101,9 +99,8 @@ with that post's URL.
 
 Hi all! Could you help spread the word on this one? We're running an
 online build session for the November Incubator challenge, and it's
-organized entirely here on the Discord: teams form in #t4p-hackathons
-from Monday the 23rd, and we build together on Saturday, November 28, 9 AM ET |
-3 PM CET | 4 PM Palestine. It's open to non-members and you don't need to
+organized entirely here on the Discord, in #t4p-hackathons, and we build
+together on Saturday, November 28, 9 AM ET | 3 PM CET | 4 PM Palestine. It's open to non-members and you don't need to
 code!
 
 Sign-up steps and "Add to calendar": https://buildwith.techforpalestine.org/?ref=discord-share
@@ -169,9 +166,9 @@ hasbara, pro-Israel bias and Zionist ownership and influence of mainstream
 news media?"
 
 All of it happens on the Discord, in #t4p-hackathons. Problems to work on
-go up there from Monday the 23rd, teams form there during the week, and
-on the 28th (9 AM ET | 3 PM CET | 4 PM Palestine) we build together. Every
-team starts its Incubator application before it logs off.
+go up there from Monday the 23rd, and on the 28th (9 AM ET | 3 PM CET |
+4 PM Palestine) we build together. Every team starts its Incubator
+application before it logs off.
 
 You don't need to code. Journalists, researchers, designers and
 campaigners are as useful here as developers.

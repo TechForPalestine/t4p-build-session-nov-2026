@@ -82,11 +82,10 @@
     el('s3-logo', 'left:0;right:0;top:70px;display:flex;justify-content:center', '<div class="logo"><img src="' + LOGO + '" style="height:150px" alt=""></div>') +
     el('s3-join', 'left:0;right:0;top:290px;text-align:center', '<p class="up" style="font-size:46px;font-weight:800">Join us on our Discord</p>') +
     el('s3-channel', 'left:0;right:0;top:370px;text-align:center', '<p style="font-size:94px;font-weight:900;color:var(--green);letter-spacing:-.01em">' + CHANNEL + '</p>') +
-    el('s3-form', 'left:60px;right:60px;top:530px;text-align:center', '<p style="font-size:38px;font-weight:700">Teams form there from November 23</p>') +
-    el('s3-day', 'left:60px;right:60px;top:640px;text-align:center', '<p class="up" style="font-size:52px;font-weight:900">Build session: ' + EVENT.dateLong + '</p>' +
+    el('s3-day', 'left:60px;right:60px;top:570px;text-align:center', '<p class="up" style="font-size:52px;font-weight:900">Build session: ' + EVENT.dateLong + '</p>' +
       '<p class="up" style="font-size:36px;font-weight:700;margin-top:14px">' + EVENT.times + '</p>') +
-    el('s3-page', 'left:0;right:0;top:850px;text-align:center', '<span class="pill" style="font-size:40px;text-transform:none">' + PAGE + '</span>') +
-    el('s3-free', 'left:0;right:0;top:985px;text-align:center', '<p class="up" style="font-size:30px;font-weight:700">Free · No team or coding needed</p>') +
+    el('s3-page', 'left:0;right:0;top:800px;text-align:center', '<span class="pill" style="font-size:40px;text-transform:none">' + PAGE + '</span>') +
+    el('s3-free', 'left:0;right:0;top:945px;text-align:center', '<p class="up" style="font-size:30px;font-weight:700">Free · No team or coding needed</p>') +
     '<div id="s3-hills" style="position:absolute;left:0;right:0;bottom:0;height:260px">' + HILLS(260) + '</div>' +
     '</div>';
 
@@ -139,8 +138,7 @@
     set('s3-join', prog(t, s3t + .2, .4), 'translateY(' + ((1 - easeOut(prog(t, s3t + .2, .5))) * 30) + 'px)');
     var ch = prog(t, s3t + .5, .5);
     set('s3-channel', ch, 'scale(' + (0.7 + 0.3 * easeBack(ch)) + ')');
-    set('s3-form', prog(t, s3t + 1.0, .4));
-    set('s3-day', prog(t, s3t + 1.3, .5), 'translateY(' + ((1 - easeOut(prog(t, s3t + 1.3, .6))) * 30) + 'px)');
+    set('s3-day', prog(t, s3t + 1.0, .5), 'translateY(' + ((1 - easeOut(prog(t, s3t + 1.0, .6))) * 30) + 'px)');
     var pg = prog(t, s3t + 1.8, .5);
     set('s3-page', pg, 'scale(' + (0.8 + 0.2 * easeBack(pg)) + ')');
     set('s3-free', prog(t, s3t + 2.1, .4));
