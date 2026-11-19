@@ -52,10 +52,17 @@ All confirmed by Matt and Iva, 2026-11-19, unless a line says otherwise.
 | Lead | Matt |
 | Discord setup, seeded problems, announcements | Andrés |
 | Discord admin (creates the scheduled event, builds the category and role) | To name |
+| Cloudflare DNS for techforpalestine.org (adds the `buildwith` record) | To name |
+| GoatCounter account owner | To name |
 | MC | To name; Matt runs Stage if nobody else does |
 | Moderators (two, online the whole afternoon) | To name |
 | Advisers (two to four) | To name |
 | Incubator contact (explains the application at 18:30) | To name; ask Iva |
+
+Andrés is a volunteer member and holds no T4P accounts. Everything that
+needs a T4P login (Discord admin, Cloudflare, GoatCounter, T4P social
+accounts) is done by the person Matt names for it; Andrés prepares the
+text and settings.
 | Journalists, researchers or campaigners who drop in on teams | Ask Iva |
 
 ## Tracking
@@ -77,8 +84,9 @@ Teams and applications come from `#submissions`: one post per team, and
   clicked. Names of people signed up are in the Discord event's
   "Interested" list. Ad blockers hide some visits, so treat the number as
   a minimum.
-- GoatCounter account: create it at https://www.goatcounter.com/signup
-  with the code `t4p-buildwith`, using an email T4P can reach. Free for
+- GoatCounter account: someone at T4P creates it at
+  https://www.goatcounter.com/signup with the code `t4p-buildwith` and a
+  T4P email (Andrés holds no T4P accounts). Free for
   non-commercial sites. Until the account exists the page works as normal
   and nothing is counted. In the account's settings, the dashboard can be
   made public so Matt and Iva can read it without a login.
@@ -117,9 +125,9 @@ GitHub Pages also publishes the rest of the repo under the same domain
 
 | Date | Task | Owner |
 |------|------|-------|
-| Thu 11-19 | Page live at buildwith.techforpalestine.org (steps above); challenge page links to it | Andrés, T4P admin with Cloudflare access |
+| Thu 11-19 | Page live at buildwith.techforpalestine.org (steps above); challenge page links to it | Cloudflare DNS owner; repo admin merges and switches on Pages |
 | Thu 11-19 | Posts on T4P social (`docs/events/2026-11-challenge-hackathon-copy.md`), an announcement on the T4P Discord, Andrés on LinkedIn | T4P comms, Andrés |
-| Thu 11-19 | Discord scheduled event "Online build session" created: Stage channel `build-session-stage`, Sat 2026-11-28 14:00 to 18:00 UTC, description and page link. Baseline uses of `kSKjRQ2mzZ` noted. GoatCounter account `t4p-buildwith` created | Discord admin, Andrés |
+| Thu 11-19 | Discord scheduled event "Online build session" created: Stage channel `build-session-stage`, Sat 2026-11-28 14:00 to 18:00 UTC, description and page link. Baseline uses of `kSKjRQ2mzZ` noted. GoatCounter account `t4p-buildwith` created | Discord admin, GoatCounter account owner |
 | Fri 11-20 | Discord channels and role built. Announce at the 18:00 CET roundtable and the 20:30 CET brainstorm; note ideas and people looking for teams | Discord admin, Iva, Andrés |
 | Mon 11-23 | Post seeded problems in `#team-finding` (the nine questions, brainstorm ideas, wishes from the four Incubator media projects). MC, moderators, advisers named. Aneta adds the build session to the members roundup | Andrés, Matt |
 | Wed 11-25 | Dry run on Discord: Stage, voice channels, check-in and role. Reserve Zoom link created | Andrés, MC, moderators |

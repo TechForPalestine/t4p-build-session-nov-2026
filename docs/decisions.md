@@ -92,4 +92,5 @@ Claude chose GoatCounter (site code `t4p-buildwith`): one script, no
 cookies, no personal data, free for non-commercial use. It counts clicks
 on the "Join on Discord" and Incubator links and the `?ref=` of each
 caption link. It counts clicks, not people; names come from the Discord
-event's "Interested" list. The account still has to be created.
+event's "Interested" list. The account still has to be created by
+someone at T4P; Andrés holds no T4P accounts (Andrés, 2026-11-19).
