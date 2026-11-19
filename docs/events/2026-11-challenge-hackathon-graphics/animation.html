@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<title>Build session animation</title>
+<!--
+  Animated version of the build session graphics for LinkedIn video, 1080 x 1350.
+  animation.html?t=<seconds> draws the frame at that time; render-video.sh takes one
+  screenshot per frame and joins them into an MP4 with ffmpeg. Open without ?t to
+  watch it play in a browser. Event values, logo, photo and question match template.html.
+-->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Caveat:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root { --green:#1f8a3b; --red:#e4312b; --ink:#141414; --cream:#f7f3ec; }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { background: #000; }
+  body { font-family: Montserrat, system-ui, sans-serif; -webkit-font-smoothing: antialiased; color: var(--ink); }
+  .g { position: relative; overflow: hidden; background: var(--cream); width: 1080px; height: 1350px; }
+  .scene { position: absolute; inset: 0; }
+  .abs { position: absolute; }
+  .up { text-transform: uppercase; }
+  .logo img { display: block; }
+  .bar { position: absolute; left: 0; right: 0; height: 14px; background: var(--green); }
+  .bar::after { content: ""; position: absolute; left: 0; width: 22%; height: 100%; background: var(--red); }
+  .banner { background: var(--green); border-radius: 10px 60px 10px 10px; transform: rotate(-1.5deg); }
+  .present { font-family: Caveat, cursive; font-weight: 700; color: var(--ink); display: inline-block; }
+  .tag { display: inline-block; background: var(--green); color: #fff; font-weight: 800; text-transform: uppercase; padding: 10px 18px; }
+  .pill { display: inline-block; background: var(--red); color: #fff; font-weight: 800; text-transform: uppercase; padding: 20px 40px; border-radius: 4px; }
+  .corner { position: absolute; right: 0; bottom: 0; background: var(--ink); color: #fff; clip-path: polygon(100% 0, 100% 100%, 0 100%); }
+  .corner div { position: absolute; right: 40px; bottom: 34px; text-align: right; font-weight: 900; text-transform: uppercase; }
+  .photo { position: absolute; display: block; object-fit: cover; }
+  .hills { position: absolute; left: 0; bottom: 0; width: 100%; }
+  .word { display: inline-block; }
+  .wipe { position: absolute; top: 0; bottom: 0; width: 1200px; background: var(--green); }
+  .wipe::after { content: ""; position: absolute; top: 0; bottom: 0; right: 0; width: 60px; background: var(--red); }
+</style>
+</head>
+<body>
+<div class="g" id="root"></div>
+<script>
+  var EVENT = { dateShort: 'November 28', dateLong: 'Saturday, November 28', times: '9 AM ET | 3 PM CET | 4 PM Palestine' };
+  var CHANNEL = '#t4p-hackathons';
+  var PAGE = 'buildwith.techforpalestine.org';
+  var LOGO = 'https://techforpalestine.org/images/new-homepage/t4p-logo.webp';
+  var PHOTO = 'https://hackathon2026.techforpalestine.org/events/';
+  var QUESTION = 'How do we combat hasbara and pro-Israel bias in mainstream media?';
+  var DURATION = 12;   // seconds; render-video.sh reads this value
+
+  var HILLS = function (h) {
+    return '<svg class="hills" viewBox="0 0 1080 ' + h + '" height="' + h + '" preserveAspectRatio="none"><path fill="#1f8a3b" d="M0 ' + (h * .45) +
+      ' C 120 ' + (h * .30) + ', 210 ' + (h * .38) + ', 300 ' + (h * .34) + ' S 470 ' + (h * .10) + ', 560 ' + (h * .22) + ' S 700 ' + (h * .40) + ', 800 ' + (h * .26) +
+      ' S 960 ' + (h * .02) + ', 1080 ' + (h * .18) + ' L1080 ' + h + ' L0 ' + h + ' Z"/></svg>';
+  };
+  var el = function (id, style, html, cls) { return '<div id="' + id + '" class="abs ' + (cls || '') + '" style="' + style + '">' + (html || '') + '</div>'; };
+  var words = function (text, prefix) {
+    return text.split(' ').map(function (w, i) { return '<span class="word" id="' + prefix + i + '">' + w + '</span>'; }).join(' ');
+  };
+
+  // Scene 1: the announcement poster (carousel-1-announce)
+  var s1 = '<div class="scene" id="s1">' +
+    el('s1-logo', 'left:50px;top:30px', '<div class="logo"><img src="' + LOGO + '" style="height:128px" alt=""></div>') +
+    el('s1-banner', 'left:60px;top:200px;width:900px;height:290px', '<div class="banner" style="width:100%;height:100%"></div>') +
+    el('s1-present', 'left:76px;top:178px', '<span class="present" style="font-size:64px">present</span>') +
+    el('s1-title', 'left:60px;top:240px;width:900px;text-align:center;color:#fff', '<p class="up" style="font-size:84px;font-weight:900;line-height:1.08">Online<br>Build session</p>') +
+    el('s1-date', 'left:60px;top:520px;width:960px', '<p class="up" style="font-size:50px;font-weight:600;letter-spacing:.01em">' + EVENT.dateShort + ' // T4P Discord</p>') +
+    '<img id="s1-photo" class="photo" src="' + PHOTO + 'hackathon-hero-balanced.webp" style="object-fit:contain;mix-blend-mode:multiply;left:20px;top:600px;width:900px;height:650px" alt="">' +
+    '<div id="s1-corner" class="corner" style="width:560px;height:480px"><div><p style="font-size:62px;line-height:1">Free<br>entry</p><p style="font-size:30px;line-height:1.2;margin-top:14px">No coding needed</p></div></div>' +
+    '</div>';
+
+  // Scene 2: the challenge question (carousel-2-challenge)
+  var s2 = '<div class="scene" id="s2">' +
+    '<img class="photo" src="' + PHOTO + 'community-gathering.webp" style="inset:0;width:100%;height:100%;opacity:.16;filter:grayscale(.3)" alt="">' +
+    '<div class="bar" style="top:0"></div><div class="bar" style="bottom:0"></div>' +
+    el('s2-tag', 'left:0;right:0;top:200px;text-align:center', '<span class="tag" style="font-size:34px">November Incubator Challenge</span>') +
+    el('s2-q', 'left:70px;right:70px;top:340px;text-align:center', '<p class="up" style="font-size:84px;font-weight:900;line-height:1.08">' + words(QUESTION, 'q') + '</p>') +
+    el('s2-sub', 'left:110px;right:110px;top:930px;text-align:center', '<p style="font-size:40px;font-weight:700;line-height:1.4">Build an answer with a team: a campaign, a guide, a dataset or a tool.</p>') +
+    '</div>';
+
+  // Scene 3: where to go (Discord channel, date, page)
+  var s3 = '<div class="scene" id="s3">' +
+    '<div class="bar" style="top:0"></div>' +
+    el('s3-logo', 'left:0;right:0;top:70px;display:flex;justify-content:center', '<div class="logo"><img src="' + LOGO + '" style="height:150px" alt=""></div>') +
+    el('s3-join', 'left:0;right:0;top:290px;text-align:center', '<p class="up" style="font-size:46px;font-weight:800">Join us on our Discord</p>') +
+    el('s3-channel', 'left:0;right:0;top:370px;text-align:center', '<p style="font-size:94px;font-weight:900;color:var(--green);letter-spacing:-.01em">' + CHANNEL + '</p>') +
+    el('s3-form', 'left:60px;right:60px;top:530px;text-align:center', '<p style="font-size:38px;font-weight:700">Teams form there from November 23</p>') +
+    el('s3-day', 'left:60px;right:60px;top:640px;text-align:center', '<p class="up" style="font-size:52px;font-weight:900">Build session: ' + EVENT.dateLong + '</p>' +
+      '<p class="up" style="font-size:36px;font-weight:700;margin-top:14px">' + EVENT.times + '</p>') +
+    el('s3-page', 'left:0;right:0;top:850px;text-align:center', '<span class="pill" style="font-size:40px;text-transform:none">' + PAGE + '</span>') +
+    el('s3-free', 'left:0;right:0;top:985px;text-align:center', '<p class="up" style="font-size:30px;font-weight:700">Free · No team or coding needed</p>') +
+    '<div id="s3-hills" style="position:absolute;left:0;right:0;bottom:0;height:260px">' + HILLS(260) + '</div>' +
+    '</div>';
+
+  document.getElementById('root').innerHTML = s1 + s2 + s3 + '<div class="wipe" id="w1"></div><div class="wipe" id="w2"></div>';
+
+  // Timing helpers
+  var clamp = function (x) { return Math.max(0, Math.min(1, x)); };
+  var prog = function (t, start, len) { return clamp((t - start) / len); };
+  var easeOut = function (x) { return 1 - Math.pow(1 - x, 3); };
+  var easeBack = function (x) { var c = 1.6; return 1 + (c + 1) * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
+  var easeInOut = function (x) { return x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2; };
+  var set = function (id, opacity, transform) {
+    var e = document.getElementById(id); if (!e) return;
+    e.style.opacity = opacity; if (transform !== undefined) e.style.transform = transform;
+  };
+  // A wipe crosses the frame from left to right; the scene under it switches at the midpoint.
+  var wipe = function (id, t, start) {
+    var x = easeInOut(prog(t, start, .7));
+    document.getElementById(id).style.left = (-1200 + x * 2400) + 'px';
+  };
+
+  var W1 = 4.3, W2 = 8.0;   // wipe start times
+  function draw(t) {
+    var scene = t < W1 + .35 ? 1 : (t < W2 + .35 ? 2 : 3);
+    ['s1', 's2', 's3'].forEach(function (s, i) { document.getElementById(s).style.visibility = (i + 1 === scene) ? 'visible' : 'hidden'; });
+
+    // Scene 1 starts with the logo, banner and title in place, so the first frame works as the video's preview image.
+    set('s1-banner', 1);
+    set('s1-logo', 1);
+    set('s1-title', 1);
+    var p = prog(t, .6, .5);
+    set('s1-present', p, 'rotate(-8deg) scale(' + (0.4 + 0.6 * easeBack(p)) + ')');
+    set('s1-date', prog(t, 1.0, .5), 'translateX(' + ((1 - easeOut(prog(t, 1.0, .6))) * -60) + 'px)');
+    set('s1-photo', prog(t, 1.4, .6), 'scale(' + (0.92 + 0.08 * easeOut(prog(t, 1.4, .8))) + ')');
+    var c = easeOut(prog(t, 2.0, .6));
+    set('s1-corner', 1, 'translate(' + ((1 - c) * 560) + 'px,' + ((1 - c) * 480) + 'px)');
+
+    // Scene 2: tag, then the question word by word, then the line under it.
+    var s2t = W1 + .35;
+    set('s2-tag', prog(t, s2t, .4), 'translateY(' + ((1 - easeOut(prog(t, s2t, .5))) * -30) + 'px)');
+    QUESTION.split(' ').forEach(function (w, i) {
+      var wp = prog(t, s2t + .3 + i * .17, .35);
+      set('q' + i, wp, 'translateY(' + ((1 - easeOut(wp)) * 50) + 'px)');
+    });
+    set('s2-sub', prog(t, s2t + 2.4, .5), 'translateY(' + ((1 - easeOut(prog(t, s2t + 2.4, .6))) * 30) + 'px)');
+
+    // Scene 3: where to go, then hold.
+    var s3t = W2 + .35;
+    set('s3-logo', prog(t, s3t, .4));
+    set('s3-join', prog(t, s3t + .2, .4), 'translateY(' + ((1 - easeOut(prog(t, s3t + .2, .5))) * 30) + 'px)');
+    var ch = prog(t, s3t + .5, .5);
+    set('s3-channel', ch, 'scale(' + (0.7 + 0.3 * easeBack(ch)) + ')');
+    set('s3-form', prog(t, s3t + 1.0, .4));
+    set('s3-day', prog(t, s3t + 1.3, .5), 'translateY(' + ((1 - easeOut(prog(t, s3t + 1.3, .6))) * 30) + 'px)');
+    var pg = prog(t, s3t + 1.8, .5);
+    set('s3-page', pg, 'scale(' + (0.8 + 0.2 * easeBack(pg)) + ')');
+    set('s3-free', prog(t, s3t + 2.1, .4));
+    set('s3-hills', 1, 'translateY(' + ((1 - easeOut(prog(t, s3t, .8))) * 260) + 'px)');
+
+    wipe('w1', t, W1);
+    wipe('w2', t, W2);
+  }
+
+  var q = new URLSearchParams(location.search).get('t');
+  if (q !== null) { draw(parseFloat(q)); }
+  else {
+    var t0 = performance.now();
+    (function loop() { draw(((performance.now() - t0) / 1000) % DURATION); requestAnimationFrame(loop); })();
+  }
+</script>
+</body>
+</html>

@@ -26,6 +26,7 @@ follow T4P's posts: ET, CET and Palestine time (UTC+2 on 2026-11-28).
 | `carousel-1-announce.png`, `carousel-2-challenge.png`, `carousel-3-details.png`, `carousel-4-join.png` | 1080 x 1350 | Instagram and LinkedIn carousel, in order. Slide 1 alone works as a single post |
 | `banner.png` | 1600 x 900 | X, Bluesky, Mastodon, Threads, Discord, link posts |
 | `story.png` | 1080 x 1920 | Instagram and WhatsApp stories; add a link sticker |
+| `build-session-animation.mp4` | 1080 x 1350, 12 s, no sound | LinkedIn video post (T4P's or Andrés's); also works on Instagram. Set `carousel-1-announce.png` as the cover image |
 
 ## T4P: Instagram and LinkedIn (carousel)
 
@@ -177,5 +178,5 @@ campaigners are as useful here as developers.
 
 Join the Discord and sign up here: https://buildwith.techforpalestine.org/?ref=andres-linkedin
 
-Attach `carousel-1-announce.png` or the full carousel. About 110 words.
+Attach `build-session-animation.mp4` (cover image: `carousel-1-announce.png`), or `carousel-1-announce.png` or the full carousel. About 110 words.
 

@@ -27,6 +27,9 @@ in the
 4. [Social graphics](docs/events/2026-11-challenge-hackathon-graphics/):
    a four-slide carousel (1080 x 1350), a banner (1600 x 900, also the
    page's link preview) and a story (1080 x 1920).
+   `build-session-animation.mp4` is a 12-second animated version for
+   LinkedIn (1080 x 1350, no sound), made from `animation.html` with
+   `render-video.sh`.
 5. [Challenge page mockup](docs/events/2026-11-challenge-page-mockup/):
    a copy of techforpalestine.org/monthly-challenge (2026-11-19) with a
    proposed build session card and hero button, for T4P's website team.
