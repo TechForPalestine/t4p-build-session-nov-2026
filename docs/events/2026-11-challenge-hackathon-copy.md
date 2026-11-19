@@ -177,3 +177,17 @@ Join the Discord and sign up here: https://buildwith.techforpalestine.org/?ref=a
 
 Attach `build-session-animation.mp4` (cover image: `carousel-1-announce.png`), or `carousel-1-announce.png` or the full carousel. About 110 words.
 
+
+## Andrés's LinkedIn: first comment with the links (his voice, his OK)
+
+Post as the first comment on the LinkedIn post above, right after it goes
+up. The brainstorm line only applies until it starts on Friday,
+November 20; drop it after that.
+
+Links for everything!
+
+🗓️ Build session page, sign-up steps and "Add to calendar": https://buildwith.techforpalestine.org/?ref=andres-linkedin-comment
+💬 Join the T4P Discord: https://discord.com/invite/kSKjRQ2mzZ
+💡 Brainstorm on Zoom, this Friday, November 20, 2:30 PM ET: https://us06web.zoom.us/meeting/register/VcASwZtkTsmH3poubwJcOw
+📰 The November challenge: https://techforpalestine.org/monthly-challenge
+🚀 Apply to the T4P Incubator: https://projecthub.techforpalestine.org/apply
